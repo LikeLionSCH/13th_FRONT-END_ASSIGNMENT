@@ -3,4 +3,3 @@ function Display({ value }) {
   }
   
   export default Display;
-  

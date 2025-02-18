@@ -1,17 +1,21 @@
 "use client";
 
 import { useState } from "react";
-import "./page.css";
+import styles from "./page.module.css"; // CSS Module 사용
 
 // 숫자 버튼
 function NumButton({ value, onClick }) {
-  return <div className="num_buttons" onClick={() => onClick(value)}>{value}</div>;
+  return (
+    <div className={styles.num_buttons} onClick={() => onClick(value)}>
+      {value}
+    </div>
+  );
 }
 
 // 연산자 버튼
 function OpButton({ value, onClick }) {
   return (
-    <div className="op_buttons" onClick={() => onClick(value)}>
+    <div className={styles.op_buttons} onClick={() => onClick(value)}>
       {value}
     </div>
   );
@@ -52,44 +56,44 @@ export default function Calculator() {
     setWaitingForSecond(false);
   }
 
-  // = 값 출력
+  // = 값 출력 
   function handleEqualsClick() {
-    if (firstValue != null && operator !== null) {
-      const result = calculate(firstValue, display, operator);
-      setDisplay(result.toString());
-      setFirstValue(result);
-      setOperator(null);
-      setWaitingForSecond(false);
-    }
+    if (firstValue == null || operator === null) return;
+    
+    const result = calculate(firstValue, display, operator);
+    setDisplay(result.toString());
+    setFirstValue(result);
+    setOperator(null);
+    setWaitingForSecond(false);
   }
 
   // 숫자 입력 처리
   function handleNumClick(value) {
     if (waitingForSecond) {
-      setDisplay(value); // 두 번째 숫자 입력 시 새로 시작
+      setDisplay(value);
       setWaitingForSecond(false);
     } else {
-      setDisplay(prev => (prev === "0" ? value : prev + value)); // 숫자 이어 붙임
+      setDisplay((prev) => (prev === "0" ? value : prev + value));
     }
   }
 
   // 연산자 버튼 클릭 처리
   function handleOpClick(value) {
     if (firstValue === null) {
-      setFirstValue(display); // 첫 번째 숫자 저장
+      setFirstValue(display);
     } else if (!waitingForSecond) {
-      const result = calculate(firstValue, display, operator); // 이전 연산 수행
-      setFirstValue(result); // 계산 결과를 첫 번째 숫자로 저장
-      setDisplay(result.toString()); // 화면에 표시
+      const result = calculate(firstValue, display, operator);
+      setFirstValue(result);
+      setDisplay(result.toString());
     }
     setOperator(value);
-    setWaitingForSecond(true); // 두 번째 숫자 입력 대기
+    setWaitingForSecond(true);
   }
 
   return (
-    <div className="calc">
-      <div className="display">{display}</div>
-      <div className="buttons_tool">
+    <div className={styles.calc}>
+      <div className={styles.display}>{display}</div>
+      <div className={styles.buttons_tool}>
         <div style={{ display: "flex" }}>
           <NumButton value="." onClick={handleNumClick} />
           <OpButton value="AC" onClick={handleClearClick} />

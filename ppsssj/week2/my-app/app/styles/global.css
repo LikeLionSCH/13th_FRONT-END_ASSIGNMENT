@@ -1,79 +1,9 @@
-
-.num_buttons, .op_buttons {
-    border-radius: 12px;
-    width: 60px;
-    height: 60px;
-    margin: 5px;
+body {
+    font-family: Arial;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    font-size: 20px;
-    transition: transform 0.1s ease, box-shadow 0.1s ease;
-}
-
-.num_buttons {
-    background-color: rgb(234, 231, 231);
-}
-
-.num_buttons:hover {
-    background-color: rgb(180, 180, 180);
-    transform: scale(1.1);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.num_buttons:active {
-    transform: scale(0.95);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-.op_buttons {
-    background-color: rgb(206, 206, 206);
-}
-
-.op_buttons:hover {
-    background-color: rgb(180, 180, 180);
-    transform: scale(1.1);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.op_buttons:active {
-    transform: scale(0.95);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-.display {
-    display: flex;
-    justify-content: end;
-    align-items: center;
-    font-size: 36px;
-    margin: auto;
-    width: 85%;
-    height: 30%;
-    background-color: white;
-    margin-bottom: 5px;
-    border-radius: 5px;
-}
-
-.calc {
-    background-color: #dcdcdc;
-    border-radius: 25px;
-    width: 50vh;
-    height: 80%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.buttons_tool {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: white;
-    border-radius: 100px;
-    height: 60%;
-    width: 85%;
-    margin: 5%;
-}
+    justify-content: center; /* 수평 중앙 정렬 */
+    align-items: center; /* 수직 중앙 정렬 */
+    height: 100vh; /* 화면 높이 100% */
+    margin: 0; /* 기본 margin 제거 */
+    background-color: hsl(0, 0%, 88%);
+  }

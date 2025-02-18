@@ -1,0 +1,73 @@
+/* page.module.css */
+.calc {
+    background-color: #dcdcdc;
+    border-radius: 25px;
+    width: 350px; /* 고정된 크기 설정 (자동 중앙정렬에 유리) */
+    height: 500px; /* 고정 높이 설정 */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* 버튼들을 세로 중앙으로 정렬 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-top: 50%;
+    margin: auto; /* 자동 중앙 정렬 */
+  }
+  
+  .display {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    font-size: 36px;
+    width: 85%;
+    height: 20%; /* 고정 높이 설정 */
+    background-color: white;
+    margin-bottom: 5px;
+    border-radius: 5px;
+  }
+  
+  .buttons_tool {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border-radius: 100px;
+    height: 60%;
+    width: 85%;
+    margin: 5%;
+  }
+  
+  .num_buttons,
+  .op_buttons {
+    border-radius: 12px;
+    width: 60px;
+    height: 60px;
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 20px;
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
+  }
+  
+  .op_buttons {
+    background-color: rgb(206, 206, 206);
+  }
+  
+  .num_buttons {
+    background-color: rgb(234, 231, 231);
+  }
+  
+  .op_buttons:hover,
+  .num_buttons:hover {
+    background-color: rgb(180, 180, 180);
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .op_buttons:active,
+  .num_buttons:active {
+    transform: scale(0.95);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
