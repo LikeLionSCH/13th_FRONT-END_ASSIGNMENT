@@ -1,0 +1,9 @@
+body {
+    font-family: Arial;
+    display: flex;
+    justify-content: center; /* 수평 중앙 정렬 */
+    align-items: center; /* 수직 중앙 정렬 */
+    height: 100vh; /* 화면 높이 100% */
+    margin: 0; /* 기본 margin 제거 */
+    background-color: hsl(0, 0%, 88%);
+  }

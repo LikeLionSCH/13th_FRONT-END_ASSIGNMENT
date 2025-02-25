@@ -1,0 +1,45 @@
+.historyContainer {
+    padding: 20px;
+    max-width: 600px; 
+    margin: 0 auto; 
+    background-color: #f9f9f9; 
+    border-radius: 8px; 
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+.titleStyle{
+    font-size: 25px;
+}
+
+.historyItem {
+    padding: 10px;
+    border: 1px solid #e0e0e0; 
+    border-radius: 5px; 
+    margin-bottom: 10px; 
+    display: flex; 
+    justify-content: space-between;
+    align-items: center; 
+    transition: background-color 0.2s; 
+}
+
+.historyItem:hover {
+    background-color: #f1f1f1;
+}
+
+.line {
+    display: flex; 
+    align-items: center; 
+}
+
+.deleteButton {
+    background-color: #ff4d4d; 
+    color: white; 
+    border: none; 
+    border-radius: 5px; 
+    padding: 10px 15px; 
+    cursor: pointer; 
+    transition: background-color 0.2s; 
+}
+
+.deleteButton:hover {
+    background-color: #ff1a1a; 
+}
