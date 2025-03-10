@@ -8,12 +8,11 @@ export default function History() {
     const {historyList, selectedHistory,
         handleSelect, handleDelete,
     } = useServer();
-
-    // selectedHistory 변경될 때 로그 출력력
+    
+    //항목 선택 시 로그 표출
     useEffect(() => {
-        console.log("🆕 현재 선택된 항목:", selectedHistory);
+        console.log("현재 선택된 항목:", selectedHistory);
     }, [selectedHistory]);
-
 
     return (
         <div className={styles.historyContainer}>
