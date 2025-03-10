@@ -4,27 +4,9 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import styles from "./history.module.css";
 
-export default function History() {
-    const [historyList, setHistoryList] = useState([]); // 서버 데이터 저장
-    const [selectedHistory, setSelectedHistory] = useState([]); // 선택된 항목 저장
+function useServer(fetchHistory){ //재랜더링과 상관 없이 
+    const [selectedHistory, setSelectedHistory] = useState([]);
 
-    // 서버에서 데이터 가져오기
-    async function fetchHistory() {
-        try {
-            const response = await axios.get("http://iubns.net:7000/?key=sungjin");
-            setHistoryList(response.data); // 최신 데이터 읽어드림림
-            console.log("서버에서 받은 최신 데이터:", response.data); 
-        } catch (error) { 
-            console.error("서버에서 데이터를 불러오는 중 오류 발생:", error);
-        }
-    }
-
-    // 최초 렌더링 시 데이터 가져오기
-    useEffect(() => {
-        fetchHistory();
-    }, []);
-
-    // 선택한 항목 저장 index->id
     function handleSelect(id) {
         setSelectedHistory((prevSelected) => {
             const newSelected = prevSelected.includes(id)
@@ -34,11 +16,6 @@ export default function History() {
             return newSelected;
         });
     }
-
-    // selectedHistory 변경될 때 로그 출력력
-    useEffect(() => {
-        console.log("🆕 현재 선택된 항목:", selectedHistory);
-    }, [selectedHistory]);
 
     // 삭제 기능
     async function handleDelete() {
@@ -55,6 +32,33 @@ export default function History() {
             console.error("서버에서 항목 삭제 중 오류 발생:", error);
         }
     }
+    return {selectedHistory, handleSelect, handleDelete};
+}
+
+export default function History() {
+    const [historyList, setHistoryList] = useState([]); // 서버 데이터 저장
+    const { selectedHistory, handleSelect, handleDelete } = useServer(fetchHistory);
+
+    // 서버에서 데이터 가져오기
+    async function fetchHistory() {
+        try {
+            const response = await axios.get("http://iubns.net:7000/?key=sungjin");
+            setHistoryList(response.data); // 최신 데이터 읽어드림림
+            console.log("서버에서 받은 최신 데이터:", response.data); 
+        } catch (error) { 
+            console.error("서버에서 데이터를 불러오는 중 오류 발생:", error);
+        }
+    }
+
+    //최초 렌더링 시 데이터 가져오기
+    useEffect(() => {
+        fetchHistory();
+    }, []);
+
+    //항목 선택 시 로그 표출
+    useEffect(() => {
+        console.log("현재 선택된 항목:", selectedHistory);
+    }, [selectedHistory]);
 
     return (
         <div className={styles.historyContainer}>
