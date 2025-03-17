@@ -8,13 +8,14 @@ export default function Calculator() {
     const [firstNumber, setFirstNumber] = useState('0')
     const [selectedOperator, setSelectedOperator] = useState(null)
     const [isNewInput, setIsNewInput] = useState(false);
+    const MAX_DISPLAY_LENGTH = 9;
 
     function handleNumberButtonClick(number) {
         if (isNewInput) {
             setDisplay(number.toString());
             setIsNewInput(false);
         } else {
-            if (display.length >= 9) return;
+            if (display.length >= MAX_DISPLAY_LENGTH) return;
             if (display === "0") {
                 setDisplay(number)
                 return
@@ -25,32 +26,12 @@ export default function Calculator() {
 
     function handleOperatorButtonClick(operator) {
         if (operator === "AC") {
-            setDisplay("0");
-            setFirstNumber("0");
-            setSelectedOperator(null);
-            setIsNewInput(false);
+            selectedACButton();
             return;
         }
 
         if (operator === "DE") {
-            if (display.length === 1) {
-                setDisplay("0");
-            } else {
-                setDisplay(display.slice(0, -1));
-            }
-            return;
-        }
-
-        if (operator === "%") {
-            if (selectedOperator && firstNumber !== "0") {
-                const operand1 = parseFloat(firstNumber);
-                const operand2 = parseFloat(display);
-                const result = operand1 * (operand2 / 100); 
-                setDisplay(result.toString());
-                setFirstNumber(result.toString());
-                setSelectedOperator(null);
-                setIsNewInput(true);
-            }
+            selectedDEButton();
             return;
         }
 
@@ -63,15 +44,7 @@ export default function Calculator() {
 
         if (operator === "=") {
             if (!selectedOperator || firstNumber === "0") return;
-
-            const operand1 = parseFloat(firstNumber);
-            const operand2 = parseFloat(display);
-            const result = calc(selectedOperator, operand1, operand2).toString();
-
-            setDisplay(result.length > 9 ? parseFloat(result.slice(0, 9)) : result);
-            setFirstNumber(result);
-            setSelectedOperator(null);
-            setIsNewInput(true);
+            selectedEqualButton();
         }
     }
 
@@ -81,6 +54,7 @@ export default function Calculator() {
             case "-": return operand1 - operand2
             case "*": return operand1 * operand2
             case "/": return operand1 / operand2
+            case "%": return operand1 / 100
         }
     }
 
@@ -90,9 +64,34 @@ export default function Calculator() {
         }
     }
 
-    const { push } = useRouter()
-    function goToHistoryPage() {
-        push("/history")
+    function selectedACButton() {
+        setDisplay("0");
+        setFirstNumber("0");
+        setSelectedOperator(null);
+        setIsNewInput(false);
+    }
+
+    function selectedEqualButton() {
+        const operand1 = parseFloat(firstNumber);
+        const operand2 = parseFloat(display);
+        const result = calc(selectedOperator, operand1, operand2).toString();
+
+        setDisplay(result.length > MAX_DISPLAY_LENGTH ? parseFloat(result.slice(0, MAX_DISPLAY_LENGTH)) : result);
+        setFirstNumber(result);
+        setSelectedOperator(null);
+        setIsNewInput(true);
+    }
+
+    function selectedDEButton() {
+        if (selectedOperator !== null) { // 연산자가 선택된 경우 아무것도 하지 않음
+            return;
+        }
+
+        if (display.length === 1) {
+            setDisplay("0");
+        } else {
+            setDisplay(display.slice(0, -1));
+        }
     }
 
     return (
