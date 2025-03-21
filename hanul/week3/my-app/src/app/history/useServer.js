@@ -3,9 +3,13 @@ import axios from "axios"
 
 const apiurl = "http://iubns.net:7000/?"
 
-export default function useHistory(keys="hanul"){
+export default function useServer(keys="hanul"){
     const [historyList, setHistoryList] = useState([])
     
+    useEffect(()=>{
+        fecthHistory()
+    }, [])
+
     async function fecthHistory(){
         const {data} = await axios.get(apiurl, {
             params:{
@@ -15,9 +19,13 @@ export default function useHistory(keys="hanul"){
         setHistoryList(data)
     }
     
-    useEffect(()=>{
+    async function deleteHistory(ids, keys){
+        await axios.delete(apiurl, {params:{
+            id : ids,
+            key : keys}
+        })
         fecthHistory()
-    }, [])
+    }
 
-    return {historyList}
+    return {historyList,deleteHistory}
 }

@@ -5,12 +5,7 @@ import deleteData from "./deleteData"
 import styles from "./page.module.css"
 
 export default function History(){
-    const {historyList} = useServer("hanul")
-
-    function deleteHistory(id, key="hanul"){
-        console.log(id + " " + key)
-        deleteData(id, key)
-    }
+    const {historyList, deleteHistory} = useServer("hanul")
 
     return (
         <>
