@@ -1,2 +1,10 @@
-# 13th_FRONT-END_ASSIGNMENT
-13th_FRONT-END_ASSIGNMENT
+🦁 멋쟁이사자처럼 13th at 순천향대학교
+📝 세션 과제 제출용 Repository
+❗ 과제 제출 규칙
+
+폴더 구조 & 이름 규칙
+
+📂 최상위 폴더 : "이름"
+📂 하위 폴더 : "week1"
+
+이후 week 폴더 아래에 해당 주차 과제를 제출 합니다.
