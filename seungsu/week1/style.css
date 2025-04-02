@@ -1,0 +1,109 @@
+* {
+    /* 기본 여백 제거 */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to bottom, #f58529, #dd2a7b, #8134af); /* 배경 그라데이션으로 설정 */
+}
+
+/* 채팅창 */
+.chat-container {
+    width: 375px;
+    height: 650px;
+    background: black;
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+.chat-header { /* 채팅창 헤더 부분(프로필, 이름, 아이콘 등) */
+    padding: 15px;
+    background: white;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* 프로필 클래스 */
+.chat-header .profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.chat-header img { /* 프로필 이미지 */
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+}
+.chat-header span { /* 이름(채팅 대상) */
+    font-weight: bold;
+}
+.chat-header .icons { /* 음성 통화, 영상 통화 아이콘 */
+    display: flex;
+    gap: 15px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* 메시지 클래스 */
+.chat-messages { 
+    flex: 1;
+    padding: 15px;
+    overflow-y: auto;
+    background: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+}
+.message {
+    max-width: 70%;
+    padding: 12px 15px;
+    margin-bottom: 10px;
+    border-radius: 18px;
+    font-size: 14px;
+    display: inline-block;
+}
+.message.sent { /* 사용자가 받은 문자 */
+    background: #833AB4;
+    color: white;
+    align-self: flex-end;
+    border-bottom-right-radius: 5px;
+}
+.message.received { /* 사용자가 보낸 문자 */
+    background: #e0e0e0;
+    color: black;
+    align-self: flex-start;
+    border-bottom-left-radius: 5px;
+}
+
+/* 메시지 입력 클래스 */
+.chat-input {
+    padding: 10px;
+    border-top: 1px solid #ddd;
+    background: white;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.chat-input input { /* 메시지 입력 창 */
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 25px;
+    outline: none;
+    font-size: 14px;
+}
+.chat-input button { /* 전송 버튼 */
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
