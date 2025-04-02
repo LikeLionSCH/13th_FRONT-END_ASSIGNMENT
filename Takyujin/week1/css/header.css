@@ -1,0 +1,70 @@
+.info-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 5px;
+    width: 100%;
+    overflow: hidden; /* 넘치는 요소 방지 */
+}
+.info-bar__time{
+    font-size: 12px;
+    font-weight: bold;
+    position:relative;
+    left:5px;
+}
+
+.info-bar__icons {
+    display: flex; 
+    gap: 8px; 
+    align-items: center; 
+    width: auto; 
+    max-width: 100px; 
+    position: relative;
+    right: 10px; 
+}
+
+.info-bar__icons img {
+    width: 16px;
+    height: auto;
+}
+
+
+.menu-bar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   
+}
+.out__icons{
+    width: 20px;
+    position: relative;
+    top: 3px; 
+}
+.num{
+    font-weight: bold;
+    position: relative;
+    left: -70px; 
+}
+.name{
+    font-weight: bold;
+    font-size:medium;
+}
+.search__icons{
+    width: 18px;
+    position: relative;
+    left: 60px; 
+}
+
+.menu__icons{
+    width: 18px;
+    position: relative;
+    right: 3px; 
+}
+header{
+    position: fixed; 
+    top: 0;
+    left: 0;  
+    background-color:  rgb(103, 186, 222);
+    width: 100%; 
+
+}
