@@ -1,0 +1,59 @@
+body {
+    background-color: rgb(103, 186, 222);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;/*vh:viewport height. 이는 브라우저 창(또는 화면)의 높이를 기준으로 한 단위*/
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    overflow-y: auto;
+    width: 100%;
+    margin: 0 auto;
+    background-color: rgb(176, 225, 246);
+    
+    height: 100%;
+}
+
+.message {
+    display: flex;
+    flex-direction: column;
+    max-width: 70%;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 5px 10px;
+}
+
+.user {
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+
+.text {
+    padding: 10px;
+    border-radius: 10px;
+    word-wrap: break-word;
+    background-color: #e0e0e0;
+    max-width: fit-content;
+}
+
+
+.my.message {
+    align-self: flex-start; 
+    max-width: 95%;
+    margin: 5px 10px;
+}
+
+.my.text {
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #ffeb3b; 
+    word-wrap: break-word;
+    display: inline-block;
+    margin-left: auto; 
+}
