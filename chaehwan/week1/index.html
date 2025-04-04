@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>채팅 웹사이트</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .chat-container {
+            width: 80%;
+            height: 80vh;
+            background: white;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.4) ;
+        }
+        .chat-box {
+            flex: 1;
+            overflow-y: auto;
+            padding: 20px;
+            border-bottom: 1px solid #ddd;
+            display: flex;
+            flex-direction: column;
+        }
+        .message {
+            max-width: 60%; 
+            word-wrap: break-word;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+        .received {
+            background: #e0e0e0;
+            align-self: flex-start;
+        }
+        .sent {
+            background: #007bff;
+            color: white;
+            align-self: flex-end;
+        }
+        .input-container {
+            display: flex;
+            padding: 15px;
+            border-radius: 10px;
+            background: #fff;
+        }
+        .input-container input {
+            flex: 1;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            outline: none;
+            font-size: 16px;
+        }
+        .input-container button {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            margin-left: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .message-container {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+        .received-container {
+            align-self: flex-start;
+        }
+        .sent-container {
+            align-self: flex-end;
+        }
+    </style>
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-box" id="chatBox">
+            <div class="message-container received-container">
+                <div class="message received">자료구조 왜들어야함?</div>
+            </div>
+            <div class="message-container sent-container">
+                <div class="message sent">그냥 챗지피티한태 "해줘" 하면 안되나</div>
+            </div>
+            <div class="message-container received-container">
+                <div class="message received">안되긴해...</div>
+            </div>
+            <div class="message-container received-container">
+                <div class="message sent">저 배고파여</div>
+            </div>
+        </div>
+        <div class="input-container">
+            <input type="text" id="messageInput" placeholder="메시지를 입력하세요...">
+            <button onclick="sendMessage()">전송</button>
+        </div>
+    </div>
+</body>
+</html>
