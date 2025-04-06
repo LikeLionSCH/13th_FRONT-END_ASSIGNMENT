@@ -7,10 +7,11 @@
     overflow: hidden; /* 넘치는 요소 방지 */
 }
 .info-bar__time{
-    font-size: 12px;
+   display:flex;
+   margin-left: 5px; 
+   font-size: 12px;
     font-weight: bold;
-    position:relative;
-    left:5px;
+   
 }
 
 .info-bar__icons {
@@ -19,8 +20,7 @@
     align-items: center; 
     width: auto; 
     max-width: 100px; 
-    position: relative;
-    right: 10px; 
+    margin-right: 10px;
 }
 
 .info-bar__icons img {
@@ -36,29 +36,35 @@
    
 }
 .out__icons{
+   display:flex;
+   margin-top: 2px;
     width: 20px;
-    position: relative;
-    top: 3px; 
+   
 }
 .num{
+    display: flex;
     font-weight: bold;
-    position: relative;
-    left: -70px; 
+    margin-left:-120px;
 }
 .name{
+    display: flex;
     font-weight: bold;
     font-size:medium;
+    margin-left: 35px;
 }
 .search__icons{
+    display:flex;
+    margin-right: -110px;
     width: 18px;
-    position: relative;
-    left: 60px; 
+   
 }
 
 .menu__icons{
+    display:flex;
+    margin: top 1px;
+    margin-right: 2px;
     width: 18px;
-    position: relative;
-    right: 3px; 
+   
 }
 header{
     position: fixed; 
