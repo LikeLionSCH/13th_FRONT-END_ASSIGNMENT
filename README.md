@@ -19,3 +19,4 @@
 <a href="https://likelionsch.github.io/13th_FRONT-END_ASSIGNMENT/namkyung/week1/main">이남경</a> <br/>
 <a href="https://likelionsch.github.io/13th_FRONT-END_ASSIGNMENT/junho/week1/">금준호</a> <br/>
 <a href="https://likelionsch.github.io/13th_FRONT-END_ASSIGNMENT/chaehwan/week1/">정채환</a> <br/>
+<a href="https://likelionsch.github.io/13th_FRONT-END_ASSIGNMENT/박소형/week1/">박소형</a> <br/>
