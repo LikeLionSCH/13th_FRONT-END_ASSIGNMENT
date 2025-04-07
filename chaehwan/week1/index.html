@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>채팅 웹사이트</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-box" id="chatBox">
+            <div class="message-container sent-container">
+                <div class="name">나</div>
+                <div class="message sent">형 나 커피사줘</div>
+            </div>
+            <div class="message-container received-container">
+                <div class="name">조아람</div>
+                <div class="message received">꺼졍</div>
+            </div>
+            <div class="message-container sent-container">
+                <div class="name">나</div>
+                <div class="message sent">사줭</div>
+            </div>
+            <div class="message-container received-container">
+                <div class="name">조아람</div>
+                <div class="message received">안되긴해...</div>
+            </div>
+            <div class="message-container sent-container">
+                <div class="name">나</div>
+                <div class="message sent">저 배고파여</div>
+            </div>
+        </div>
+        <div class="input-container">
+            <input type="text" id="messageInput" placeholder="메시지를 입력하세요..."/>
+            <button onclick="sendMessage()">전송</button>
+        </div>
+    </div>
+</body>
+</html>
