@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>DM Chat</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-header">
+            <img src="TeresaLai.jpg" alt="Profile" />
+            <div class="chat-header-text">
+                <h2>Teresa Lai</h2>
+                <div class="username">teresalai_</div>
+            </div>
+            <div class="icons">
+                <span>📞</span>
+                <span>📁</span>
+            </div>
+        </div>
+        <div class="chat-messages">
+            <div class="timestamp">1:41 PM</div>
+            <div class="message-container received">
+                <img src="TeresaLai.jpg" alt="Profile" />
+                <div class="message">Anytime. Let me know if you want to link up again!</div>
+                <div class="reaction1">😊</div>
+            </div>
+            <br>
+            <div class="message-container sent">
+                <div class="message">Lets def go again. Best spa in the city!</div>
+            </div>
+            <div class="message-container sent">
+                <div class="message purple">Can you send the pic you took while we were there?</div>
+                <div class="reaction2">👍</div>
+            </div>
+        </div>
+       
+        <div class="edit-container">
+            <div class="edit-label">Edit message <span>X</span></div>
+             <div class="edit-box">
+        <textarea placeholder="Type a message..."></textarea>
+        <button>Done</button>
+    </div>
+</div>
+
+        </div>
+    </div>
+    <script>
+        const chatMessages = document.querySelector(".chat-messages");
+        const doneButton = document.querySelector(".edit-box button");
+        const textarea = document.querySelector(".edit-container textarea");
+      
+        function createMessage(text, type = "sent") {
+          const container = document.createElement("div");
+          container.classList.add("message-container", type);
+      
+          if (type === "received") {
+            const img = document.createElement("img");
+            img.src = "TeresaLai.jpg";
+            img.alt = "Profile";
+            container.appendChild(img);
+          }
+      
+          const message = document.createElement("div");
+          message.classList.add("message");
+          if (type === "sent") message.classList.add("purple");
+          message.textContent = text;
+          container.appendChild(message);
+      
+          chatMessages.appendChild(container);
+          chatMessages.scrollTop = chatMessages.scrollHeight;
+        }
+      
+        doneButton.addEventListener("click", () => {
+          const text = textarea.value.trim();
+          if (!text) return;
+      
+          createMessage(text, "sent");
+          textarea.value = "";
+      
+          setTimeout(() => {
+            const replies = [
+              "Sure, I got it!",
+              "I'll send it right now 😄",
+              "One moment!",
+              "Yep, gotcha!",
+              "Haha that was fun!"
+            ];
+            const reply = replies[Math.floor(Math.random() * replies.length)];
+            createMessage(reply, "received");
+          }, 1000);
+        });
+      </script>
+      
+      
+      
+</body>
+</html>
