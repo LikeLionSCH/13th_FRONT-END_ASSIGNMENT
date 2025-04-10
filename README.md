@@ -27,3 +27,5 @@
 <a href="https://likelionsch.github.io/13th_FRONT-END_ASSIGNMENT/chaehwan/week2/">정채환</a> <br/>
 <a href="https://likelionsch.github.io/13th_FRONT-END_ASSIGNMENT/Takyujin/week2/">탁유진</a> <br/>
 <a href="https://likelionsch.github.io/13th_FRONT-END_ASSIGNMENT/yuno/week2/">김윤오</a> <br/>
+<a href="https://likelionsch.github.io/13th_FRONT-END_ASSIGNMENT/Hongjimin/week2/">홍지민</a> <br/>
+
