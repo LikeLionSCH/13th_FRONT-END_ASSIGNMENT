@@ -20,3 +20,9 @@
 <a href="https://likelionsch.github.io/13th_FRONT-END_ASSIGNMENT/junho/week1/">금준호</a> <br/>
 <a href="https://likelionsch.github.io/13th_FRONT-END_ASSIGNMENT/chaehwan/week1/">정채환</a> <br/>
 <a href="https://likelionsch.github.io/13th_FRONT-END_ASSIGNMENT/박소형/week1/">박소형</a> <br/>
+<a href="https://likelionsch.github.io/13th_FRONT-END_ASSIGNMENT/Takyujin/week1/">탁유진</a> <br/>
+
+### week2
+
+<a href="https://likelionsch.github.io/13th_FRONT-END_ASSIGNMENT/chaehwan/week2/">정채환</a> <br/>
+<a href="https://likelionsch.github.io/13th_FRONT-END_ASSIGNMENT/Takyujin/week2/">탁유진</a> <br/>
