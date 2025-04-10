@@ -1,4 +1,3 @@
-console.log('hi')
 // 채팅창 화면에서 입력을 하여 전송 버튼을 누르면
 // 화면에 나의 메시지가 추가되기
 // 1초뒤에 상대방에 대한 답장이 보여야함
@@ -7,7 +6,6 @@ const button = document.querySelector("#input-div button")
 const content = document.querySelector("input#text-content")
 
 const submitHandler = () => {
-  console.log(content.value);
   contentDiv.innerHTML += `
     <div class="chat right">
       <div class="content">
