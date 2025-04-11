@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Chat</title>
+    <link rel = "stylesheet" href = "./weak2_homework.css"></link>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <style>
+    </style>
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-header">
+            <div class="header-left">
+                <div class="profile-pic"></div>
+                <div class="header-text">
+                    <strong>홍길동</strong>
+                    <span>dododog_dong</span>
+                </div>
+            </div>
+            <div class="header-icons">
+                <span class="material-icons">call</span>
+                <span class="material-icons">videocam</span>
+            </div>
+        </div>
+        <div class="chat-messages">
+            <div class="timestamp">오후 2:30</div>
+            <div class="message-container received">
+                <div class="profile-pic"></div>
+                <div class="chat-bubble">안녕하세요</div>
+            </div>
+            <div class="message-container received">
+                <div class="profile-pic"></div>
+                <div class="chat-bubble">반갑습니다 :D</div>
+            </div>
+            <div class="message-container sent">
+                <div class="chat-bubble">안녕하세요.</div>
+            </div>
+        </div>
+        <div class="chat-input">
+            <div class="chat-input-icons">
+                <span class="material-icons">insert_emoticon</span>
+                <span class="material-icons">photo_camera</span>
+            </div>
+            <input type="text" placeholder="메시지 보내기..." id="jihan">
+            <button onclick="btnClick()">전송</button> <!--/전송 버튼을 누르면 실행이됨-->
+        </div>
+    </div>
+</body>
+</html>
+<script src="weak2_homework.js"></script>
