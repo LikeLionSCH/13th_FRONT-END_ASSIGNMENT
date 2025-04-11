@@ -32,4 +32,5 @@
 <a href="https://likelionsch.github.io/13th_FRONT-END_ASSIGNMENT/Hongjimin/week2/">홍지민</a> <br/>
 <a href="https://likelionsch.github.io/13th_FRONT-END_ASSIGNMENT/seungwoo/week2/">유승우</a> <br/>
 <a href="https://likelionsch.github.io/13th_FRONT-END_ASSIGNMENT/Jihan/weak2/Homework_Chatting.html">김지한</a> <br/>
+<a href="https://likelionsch.github.io/13th_FRONT-END_ASSIGNMENT/namkyung/week2/main">이남경</a> <br/>
 
