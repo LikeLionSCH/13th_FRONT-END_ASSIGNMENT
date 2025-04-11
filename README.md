@@ -21,6 +21,8 @@
 <a href="https://likelionsch.github.io/13th_FRONT-END_ASSIGNMENT/chaehwan/week1/">정채환</a> <br/>
 <a href="https://likelionsch.github.io/13th_FRONT-END_ASSIGNMENT/박소형/week1/">박소형</a> <br/>
 <a href="https://likelionsch.github.io/13th_FRONT-END_ASSIGNMENT/Takyujin/week1/">탁유진</a> <br/>
+<a href="https://likelionsch.github.io/13th_FRONT-END_ASSIGNMENT/Jihan/weak1/Homework_Chatting.html">김지한</a> <br/>
+
 
 ### week2
 
@@ -29,4 +31,5 @@
 <a href="https://likelionsch.github.io/13th_FRONT-END_ASSIGNMENT/yuno/week2/">김윤오</a> <br/>
 <a href="https://likelionsch.github.io/13th_FRONT-END_ASSIGNMENT/Hongjimin/week2/">홍지민</a> <br/>
 <a href="https://likelionsch.github.io/13th_FRONT-END_ASSIGNMENT/seungwoo/week2/">유승우</a> <br/>
+<a href="https://likelionsch.github.io/13th_FRONT-END_ASSIGNMENT/Jihan/weak2/Homework_Chatting.html">김지한</a> <br/>
 
