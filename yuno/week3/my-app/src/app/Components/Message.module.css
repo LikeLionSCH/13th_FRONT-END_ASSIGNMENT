@@ -1,0 +1,31 @@
+.message {
+  display: flex;
+  margin: 10px 0px;
+}
+
+.content {
+  max-width: 200px;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 12px;
+  position: relative;
+}
+
+.op {
+  align-items: center;
+}
+
+.op .content {
+  color: black;
+  background-color : #e2e2e2;
+}
+
+.my {
+  justify-content: end;
+  padding-right: 10px;
+}
+
+.my .content {
+  color: white;
+  background-color : #8f64ff;  
+}
