@@ -1,0 +1,167 @@
+.chatContainer {
+  width: 375px;
+  height: 667px;
+  background-color: white;
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.chatHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #f5f5f7;
+  border-bottom: 1px solid #ccc;
+  position: relative;
+  height: 90px;
+}
+
+.chatMessages {
+  flex: 1;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: #ffffff;
+  height: 500px;
+  overflow-y: auto;
+}
+
+
+.messageLeft {
+  max-width: 70%;
+  word-wrap: break-word;
+  display: inline-block;
+  padding: 10px 15px;
+  border-radius: 40px;
+  font-size: 14px;
+  line-height: 1.4;
+
+  align-self: flex-start;
+  background-color: #e5e5ea;
+  color: black;
+  border-bottom-left-radius: 0;
+}
+
+.messageRight {
+  max-width: 70%;
+  word-wrap: break-word;
+  display: inline-block;
+  padding: 10px 15px;
+  border-radius: 40px;
+  font-size: 14px;
+  line-height: 1.4;
+
+  align-self: flex-end;
+  background-color: #007aff;
+  color: white;
+  border-bottom-right-radius: 0;
+}
+
+.continue {
+  border-radius: 40px;
+  margin-bottom: -8px;
+}
+
+.bottom {
+  display: flex;
+  padding: 10px;
+  border-top: 1px solid #ccc;
+  background-color: #f5f5f7;
+}
+
+.bottom button {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+  padding: auto;
+  border: none;
+  border-radius: 50%;
+  background-color: #e5e5ea;
+  color: #969699;
+  font-size: 35px;
+}
+
+.inputSendBtn {
+  position: relative;
+  flex: 1;
+} 
+
+.inputSendBtn input {
+  flex: 1;
+  padding: 10px 65px 10px 15px;
+  border: 1px solid #ccc;
+  border-radius: 25px;
+  outline: none;
+  font-size: 20px;
+}
+
+.inputSendBtn input::placeholder {
+  color: #ccc;
+  padding-left: 5px;
+} 
+
+.inputSendBtn img {
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  right: 9px;
+  top: 50%;
+  transform: translateY(-57%);
+  cursor: pointer;
+}  
+
+.arrow {
+  width: 45px;
+  height: 45px;
+  object-fit: contain;
+  display: block;
+}
+
+.who {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.userPicture {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  align-items: center;
+  margin-top: 5px;
+}
+
+.userName {
+  display: flex;
+  margin-left: 10px;
+}
+
+.name {
+  font-size: 13px;
+  color: #717171;
+  display: flex;
+}
+
+.arrowGray {
+  width: 13px;
+  height: 18px;
+}
+
+.facetime {
+  width: 40px;
+  height: 35px;
+  position: relative;
+  margin-right: 5%;
+  object-fit: contain;
+}
+
