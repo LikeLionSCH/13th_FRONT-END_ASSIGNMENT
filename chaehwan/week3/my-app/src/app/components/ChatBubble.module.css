@@ -1,0 +1,41 @@
+.messageContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.name {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #555;
+}
+
+.message {
+  max-width: 60%;
+  word-wrap: break-word;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.receivedContainer {
+  align-self: flex-start;
+}
+
+.sentContainer {
+  align-self: flex-end;
+  align-items: flex-end;
+  text-align: right;
+}
+
+.received {
+  background: #e0e0e0;
+  align-self: flex-start;
+}
+
+.sent {
+  background: #007bff;
+  color: white;
+  align-self: flex-end;
+}
