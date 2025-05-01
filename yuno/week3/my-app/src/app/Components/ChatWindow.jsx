@@ -1,3 +1,4 @@
+/*
 import { useState } from "react"
 
 import ChatHeader from "./ChatHeader.jsx"
@@ -16,3 +17,4 @@ export default function ChatWindow() {
     </>
   )
 }
+*/

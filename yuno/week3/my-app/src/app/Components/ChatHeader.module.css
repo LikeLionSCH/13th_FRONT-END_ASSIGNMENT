@@ -7,6 +7,14 @@
   padding: 10px;
 }
 
+.profile {
+  width: 25px;
+  height: 25px;
+  background-color: rgb(182, 182, 182);
+  border-radius: 30px;
+  margin: 0px 5px;
+}
+
 .info {
   display: flex;
   flex-direction: column;

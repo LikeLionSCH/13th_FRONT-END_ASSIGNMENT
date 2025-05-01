@@ -9,7 +9,7 @@
 !.yarn/plugins
 !.yarn/releases
 !.yarn/versions
-/public 
+
 
 # testing
 /coverage
@@ -41,9 +41,9 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-eslint.config.mjs
-jsconfig.json
-next.config.mjs
-package-lock.json
-package.json
-README.md
+# eslint.config.mjs
+# jsconfig.json
+# next.config.mjs
+# package-lock.json
+# package.json
+# README.md

@@ -1,4 +1,3 @@
-import Profile from "./Profile.jsx"
 import style from "./Message.module.css"
 //   {from : "me" or "op", message : "안녕하세요"},
 const Message = ({ message }) => {
@@ -9,7 +8,7 @@ const Message = ({ message }) => {
     </div>
     : 
     <div className={`${style.message} ${style.op}`}>
-      <Profile/>
+      <div className={style.profile}></div>
       <div className={style.content}>{message.message}</div>
     </div>
   )

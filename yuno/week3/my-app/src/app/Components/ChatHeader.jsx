@@ -1,11 +1,10 @@
 import styles from "./ChatHeader.module.css"
-import Profile from "./Profile.jsx"
 
 const ChatHeader = () => {
   return (
     <div className = {styles.header}>
       <div className = {styles.arrow}>{'<'}</div>
-      <Profile/>
+      <div className={styles.profile}></div>
       <div className = {styles.info}>
         <span className = {styles["info-name"]}>Teresa Lai</span>
         <span className = {styles["info-intr"]}>teresa Lai_</span>
