@@ -40,6 +40,6 @@
 ### week3
 
 최유진
-김윤오
+<a href="https://likelionsch.github.io/13th_FRONT-END_ASSIGNMENT/yuno/week3/my-app/out">김윤오</a> <br/>
 이남경
 정채환
