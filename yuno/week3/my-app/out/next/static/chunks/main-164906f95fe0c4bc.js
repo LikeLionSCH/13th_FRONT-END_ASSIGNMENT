@@ -82,13 +82,13 @@
             return f
           },
           APP_DIR_ALIAS: function () {
-            return I
+            return N
           },
           CACHE_ONE_YEAR: function () {
             return R
           },
           DOTnext_ALIAS: function () {
-            return C
+            return w
           },
           ESLINT_DEFAULT_DIRS: function () {
             return $
@@ -106,7 +106,7 @@
             return O
           },
           INSTRUMENTATION_HOOK_FILENAME: function () {
-            return T
+            return j
           },
           MATCHED_PATH_HEADER: function () {
             return o
@@ -115,7 +115,7 @@
             return S
           },
           MIDDLEWARE_LOCATION_REGEXP: function () {
-            return j
+            return T
           },
           NEXT_BODY_SUFFIX: function () {
             return h
@@ -172,7 +172,7 @@
             return k
           },
           ROOT_DIR_ALIAS: function () {
-            return w
+            return C
           },
           RSC_ACTION_CLIENT_WRAPPER_ALIAS: function () {
             return U
@@ -190,7 +190,7 @@
             return L
           },
           RSC_MOD_REF_PROXY_ALIAS: function () {
-            return N
+            return I
           },
           RSC_PREFETCH_SUFFIX: function () {
             return l
@@ -259,13 +259,13 @@
         R = 31536e3,
         O = 0xfffffffe,
         S = "middleware",
-        j = `(?:src/)?${S}`,
-        T = "instrumentation",
+        T = `(?:src/)?${S}`,
+        j = "instrumentation",
         A = "private-next-pages",
-        C = "private-dot-next",
-        w = "private-next-root-dir",
-        I = "private-next-app-dir",
-        N = "private-next-rsc-mod-ref-proxy",
+        w = "private-dot-next",
+        C = "private-next-root-dir",
+        N = "private-next-app-dir",
+        I = "private-next-rsc-mod-ref-proxy",
         x = "private-next-rsc-action-validate",
         M = "private-next-rsc-server-reference",
         L = "private-next-rsc-cache-wrapper",
@@ -411,7 +411,12 @@
       let n = r(821),
         o = r(9401)
       function a(e, t) {
-        return (0, o.normalizePathTrailingSlash)((0, n.addPathPrefix)(e, ""))
+        return (0, o.normalizePathTrailingSlash)(
+          (0, n.addPathPrefix)(
+            e,
+            "/13th_FRONT-END_ASSIGNMENT/yuno/week3/my-app/out"
+          )
+        )
       }
       ;("function" == typeof t.default ||
         ("object" == typeof t.default && null !== t.default)) &&
@@ -1297,13 +1302,13 @@
         R = r(2043),
         O = r(1181),
         S = r(8020),
-        j = r(9595),
-        T = r(9344),
+        T = r(9595),
+        j = r(9344),
         A = r(4347),
-        C = r(5201),
-        w = r(4675),
-        I = r(1154),
-        N = r(5905),
+        w = r(5201),
+        C = r(4675),
+        N = r(1154),
+        I = r(5905),
         x = r(5168),
         M = r(474)
       function L() {
@@ -1375,7 +1380,7 @@
             ) {
               if (l.startsWith("/")) {
                 let t = (0, h.parseRelativeUrl)(l),
-                  u = (0, j.getNextPathnameInfo)(t.pathname, {
+                  u = (0, T.getNextPathnameInfo)(t.pathname, {
                     nextConfig: n,
                     parseData: !0,
                   }),
@@ -1396,7 +1401,7 @@
                         ).pathname
                       ))
                   ) {
-                    let r = (0, j.getNextPathnameInfo)(
+                    let r = (0, T.getNextPathnameInfo)(
                       (0, h.parseRelativeUrl)(e).pathname,
                       { nextConfig: n, parseData: !0 }
                     )
@@ -1427,8 +1432,8 @@
                 type: "redirect-external",
                 destination:
                   "" +
-                  (0, T.formatNextPathnameInfo)({
-                    ...(0, j.getNextPathnameInfo)(t.pathname, {
+                  (0, j.formatNextPathnameInfo)({
+                    ...(0, T.getNextPathnameInfo)(t.pathname, {
                       nextConfig: n,
                       parseData: !0,
                     }),
@@ -1443,8 +1448,8 @@
             if (s) {
               if (s.startsWith("/")) {
                 let e = (0, b.parsePath)(s),
-                  t = (0, T.formatNextPathnameInfo)({
-                    ...(0, j.getNextPathnameInfo)(e.pathname, {
+                  t = (0, j.formatNextPathnameInfo)({
+                    ...(0, T.getNextPathnameInfo)(e.pathname, {
                       nextConfig: n,
                       parseData: !0,
                     }),
@@ -1735,9 +1740,9 @@
           return !1
         }
         async change(e, t, r, n, o) {
-          var s, c, f, O, S, j, T, w, x
+          var s, c, f, O, S, T, j, C, x
           let M, U
-          if (!(0, C.isLocalURL)(t)) return q({ url: t, router: this }), !1
+          if (!(0, w.isLocalURL)(t)) return q({ url: t, router: this }), !1
           let B = 1 === n._h
           B || n.shallow || (await this._bfl(r, void 0, n.locale))
           let X =
@@ -1826,7 +1831,7 @@
                 ((et = ee.pathname),
                 (ee.pathname = (0, v.addBasePath)(et)),
                 el || (t = (0, g.formatWithValidation)(ee)))),
-            !(0, C.isLocalURL)(r))
+            !(0, w.isLocalURL)(r))
           )
             return q({ url: r, router: this }), !1
           ;(en = (0, y.removeLocale)((0, P.removeBasePath)(en), W.locale)),
@@ -1838,13 +1843,13 @@
               o = (0, m.getRouteRegex)(eo)
             eu = (0, _.getRouteMatcher)(o)(n)
             let a = eo === n,
-              i = a ? (0, N.interpolateAs)(eo, n, er) : {}
+              i = a ? (0, I.interpolateAs)(eo, n, er) : {}
             if (eu && (!a || i.result))
               a
                 ? (r = (0, g.formatWithValidation)(
                     Object.assign({}, e, {
                       pathname: i.result,
-                      query: (0, I.omit)(er, i.params),
+                      query: (0, N.omit)(er, i.params),
                     })
                   ))
                 : Object.assign(er, eu)
@@ -2001,7 +2006,7 @@
               (null == (O = a.props) ? void 0 : O.pageProps) &&
               (a.props.pageProps.statusCode = 500)
             let s = n.shallow && W.route === (null != (S = a.route) ? S : eo),
-              d = null != (j = n.scroll) ? j : !B && !s,
+              d = null != (T = n.scroll) ? T : !B && !s,
               g = null != o ? o : d ? { x: 0, y: 0 } : null,
               b = {
                 ...W,
@@ -2032,10 +2037,10 @@
                   { value: "E225", enumerable: !1, configurable: !0 }
                 )
               "/_error" === this.pathname &&
-                (null == (w = self._next_DATA__.props) ||
-                null == (T = w.pageProps)
+                (null == (C = self._next_DATA__.props) ||
+                null == (j = C.pageProps)
                   ? void 0
-                  : T.statusCode) === 500 &&
+                  : j.statusCode) === 500 &&
                 (null == (x = a.props) ? void 0 : x.pageProps) &&
                 (a.props.pageProps.statusCode = 500)
               try {
@@ -2181,7 +2186,7 @@
                 unstable_skipClientCache: p,
                 isBackground: h,
               },
-              j =
+              T =
                 h && !_
                   ? null
                   : await B({
@@ -2194,32 +2199,32 @@
                       throw e
                     })
             if (
-              (j && ("/_error" === r || "/404" === r) && (j.effect = void 0),
+              (T && ("/_error" === r || "/404" === r) && (T.effect = void 0),
               h &&
-                (j
-                  ? (j.json = self._next_DATA__.props)
-                  : (j = { json: self._next_DATA__.props })),
+                (T
+                  ? (T.json = self._next_DATA__.props)
+                  : (T = { json: self._next_DATA__.props })),
               t(),
-              (null == j || null == (E = j.effect) ? void 0 : E.type) ===
+              (null == T || null == (E = T.effect) ? void 0 : E.type) ===
                 "redirect-internal" ||
-                (null == j || null == (y = j.effect) ? void 0 : y.type) ===
+                (null == T || null == (y = T.effect) ? void 0 : y.type) ===
                   "redirect-external")
             )
-              return j.effect
+              return T.effect
             if (
-              (null == j || null == (v = j.effect) ? void 0 : v.type) ===
+              (null == T || null == (v = T.effect) ? void 0 : v.type) ===
               "rewrite"
             ) {
-              let t = (0, a.removeTrailingSlash)(j.effect.resolvedHref),
+              let t = (0, a.removeTrailingSlash)(T.effect.resolvedHref),
                 o = await this.pageLoader.getPageList()
               if (
                 (!h || o.includes(t)) &&
                 ((b = t),
-                (r = j.effect.resolvedHref),
-                (n = { ...n, ...j.effect.parsedAs.query }),
+                (r = T.effect.resolvedHref),
+                (n = { ...n, ...T.effect.parsedAs.query }),
                 (i = (0, P.removeBasePath)(
                   (0, c.normalizeLocalePath)(
-                    j.effect.parsedAs.pathname,
+                    T.effect.parsedAs.pathname,
                     this.locales
                   ).pathname
                 )),
@@ -2230,7 +2235,7 @@
             }
             if ((0, S.isAPIRoute)(b))
               return q({ url: o, router: this }), new Promise(() => {})
-            let T =
+            let j =
                 u ||
                 (await this.fetchComponent(b).then((e) => ({
                   Component: e.page,
@@ -2239,19 +2244,19 @@
                   __N_SSP: e.mod.__N_SSP,
                 }))),
               A =
-                null == j || null == (R = j.response)
+                null == T || null == (R = T.response)
                   ? void 0
                   : R.headers.get("x-middleware-skip"),
-              C = T.__N_SSG || T.__N_SSP
+              w = j.__N_SSG || j.__N_SSP
             A &&
-              (null == j ? void 0 : j.dataHref) &&
-              delete this.sdc[j.dataHref]
-            let { props: w, cacheKey: I } = await this._getData(async () => {
-              if (C) {
-                if ((null == j ? void 0 : j.json) && !A)
-                  return { cacheKey: j.cacheKey, props: j.json }
-                let e = (null == j ? void 0 : j.dataHref)
-                    ? j.dataHref
+              (null == T ? void 0 : T.dataHref) &&
+              delete this.sdc[T.dataHref]
+            let { props: C, cacheKey: N } = await this._getData(async () => {
+              if (w) {
+                if ((null == T ? void 0 : T.json) && !A)
+                  return { cacheKey: T.cacheKey, props: T.json }
+                let e = (null == T ? void 0 : T.dataHref)
+                    ? T.dataHref
                     : this.pageLoader.getDataHref({
                         href: (0, g.formatWithValidation)({
                           pathname: r,
@@ -2273,7 +2278,7 @@
               }
               return {
                 headers: {},
-                props: await this.getInitialProps(T.Component, {
+                props: await this.getInitialProps(j.Component, {
                   pathname: r,
                   query: n,
                   asPath: o,
@@ -2284,9 +2289,9 @@
               }
             })
             return (
-              T.__N_SSP && O.dataHref && I && delete this.sdc[I],
+              j.__N_SSP && O.dataHref && N && delete this.sdc[N],
               this.isPreview ||
-                !T.__N_SSG ||
+                !j.__N_SSG ||
                 h ||
                 W(
                   Object.assign({}, O, {
@@ -2295,13 +2300,13 @@
                     inflightCache: this.sbc,
                   })
                 ).catch(() => {}),
-              (w.pageProps = Object.assign({}, w.pageProps)),
-              (T.props = w),
-              (T.route = b),
-              (T.query = n),
-              (T.resolvedAs = i),
-              (this.components[b] = T),
-              T
+              (C.pageProps = Object.assign({}, C.pageProps)),
+              (j.props = C),
+              (j.route = b),
+              (j.query = n),
+              (j.resolvedAs = i),
+              (this.components[b] = j),
+              j
             )
           } catch (e) {
             return this.handleRouteInfoError(
@@ -2348,7 +2353,7 @@
           if (
             (void 0 === t && (t = e),
             void 0 === r && (r = {}),
-            (0, w.isBot)(window.navigator.userAgent))
+            (0, C.isBot)(window.navigator.userAgent))
           )
             return
           let n = (0, h.parseRelativeUrl)(e),
@@ -2576,7 +2581,8 @@
             (this.pageLoader = o)
           let R = (0, p.isDynamicRoute)(e) && self._next_DATA__.autoExport
           if (
-            ((this.basePath = ""),
+            ((this.basePath =
+              "/13th_FRONT-END_ASSIGNMENT/yuno/week3/my-app/out"),
             (this.sub = c),
             (this.clc = null),
             (this._wrapApp = l),
@@ -3194,7 +3200,10 @@
         })
       let n = r(5200)
       function o(e) {
-        return (0, n.pathHasPrefix)(e, "")
+        return (0, n.pathHasPrefix)(
+          e,
+          "/13th_FRONT-END_ASSIGNMENT/yuno/week3/my-app/out"
+        )
       }
       ;("function" == typeof t.default ||
         ("object" == typeof t.default && null !== t.default)) &&
@@ -3910,10 +3919,10 @@
             return el
           },
           DEV_CLIENT_MIDDLEWARE_MANIFEST: function () {
-            return N
+            return I
           },
           DEV_CLIENT_PAGES_MANIFEST: function () {
-            return C
+            return w
           },
           DYNAMIC_CSS_MANIFEST: function () {
             return Y
@@ -3934,7 +3943,7 @@
             return y
           },
           IMAGES_MANIFEST: function () {
-            return T
+            return j
           },
           INTERCEPTION_ROUTE_REWRITE_MANIFEST: function () {
             return z
@@ -3943,7 +3952,7 @@
             return q
           },
           MIDDLEWARE_MANIFEST: function () {
-            return w
+            return C
           },
           MIDDLEWARE_REACT_LOADABLE_MANIFEST: function () {
             return V
@@ -3985,7 +3994,7 @@
             return x
           },
           ROUTES_MANIFEST: function () {
-            return j
+            return T
           },
           RSC_MODULE_TYPES: function () {
             return ed
@@ -4021,7 +4030,7 @@
             return ec
           },
           TURBOPACK_CLIENT_MIDDLEWARE_MANIFEST: function () {
-            return I
+            return N
           },
           TURBO_TRACE_DEFAULT_MEMORY_LIMIT: function () {
             return ef
@@ -4059,13 +4068,13 @@
         R = "export-marker.json",
         O = "export-detail.json",
         S = "prerender-manifest.json",
-        j = "routes-manifest.json",
-        T = "images-manifest.json",
+        T = "routes-manifest.json",
+        j = "images-manifest.json",
         A = "required-server-files.json",
-        C = "_devPagesManifest.json",
-        w = "middleware-manifest.json",
-        I = "_clientMiddlewareManifest.json",
-        N = "_devMiddlewareManifest.json",
+        w = "_devPagesManifest.json",
+        C = "middleware-manifest.json",
+        N = "_clientMiddlewareManifest.json",
+        I = "_devMiddlewareManifest.json",
         x = "react-loadable-manifest.json",
         M = "server",
         L = ["next.config.js", "next.config.mjs", "next.config.ts"],
@@ -4929,23 +4938,29 @@
     },
     6677: (e, t, r) => {
       "use strict"
-      function n(e) {
-        return e
-      }
       Object.defineProperty(t, "__esModule", { value: !0 }),
         Object.defineProperty(t, "removeBasePath", {
           enumerable: !0,
           get: function () {
-            return n
+            return o
           },
         }),
-        r(2043),
-        ("function" == typeof t.default ||
-          ("object" == typeof t.default && null !== t.default)) &&
-          void 0 === t.default.__esModule &&
-          (Object.defineProperty(t.default, "__esModule", { value: !0 }),
-          Object.assign(t.default, t),
-          (e.exports = t.default))
+        r(2043)
+      let n = "/13th_FRONT-END_ASSIGNMENT/yuno/week3/my-app/out"
+      function o(e) {
+        return (
+          0 === n.length ||
+            (e = e.slice(n.length)).startsWith("/") ||
+            (e = "/" + e),
+          e
+        )
+      }
+      ;("function" == typeof t.default ||
+        ("object" == typeof t.default && null !== t.default)) &&
+        void 0 === t.default.__esModule &&
+        (Object.defineProperty(t.default, "__esModule", { value: !0 }),
+        Object.assign(t.default, t),
+        (e.exports = t.default))
     },
     6681: (e, t, r) => {
       "use strict"
@@ -5409,13 +5424,13 @@
         R = r(5168),
         O = r(263),
         S = r(9524),
-        j = r(9177),
-        T = r(5574),
+        T = r(9177),
+        j = r(5574),
         A = r(1078),
-        C = m._(r(2871)),
-        w = m._(r(6164)),
-        I = r(4178),
-        N = r(994),
+        w = m._(r(2871)),
+        C = m._(r(6164)),
+        N = r(4178),
+        I = r(994),
         x = r(2038),
         M = r(2593),
         L = r(6677),
@@ -5480,18 +5495,18 @@
         let t = o.assetPrefix || ""
         if (
           (self._next_set_public_path__("" + t + "/next/"),
-          (0, j.setConfig)({
+          (0, T.setConfig)({
             serverRuntimeConfig: {},
             publicRuntimeConfig: o.runtimeConfig || {},
           }),
-          (a = (0, T.getURL)()),
+          (a = (0, j.getURL)()),
           (0, D.hasBasePath)(a) && (a = (0, L.removeBasePath)(a)),
           o.scriptLoader)
         ) {
           let { initScriptLoader: e } = r(1696)
           e(o.scriptLoader)
         }
-        i = new w.default(o.buildId, t)
+        i = new C.default(o.buildId, t)
         let s = (e) => {
           let [t, r] = e
           return i.routeLoader.onEntrypoint(t, r)
@@ -5501,7 +5516,7 @@
             window._next_P.map((e) => setTimeout(() => s(e), 0)),
           (window._next_P = []),
           (window._next_P.push = s),
-          ((u = (0, C.default)()).getIsSsr = () => n.isSsr),
+          ((u = (0, w.default)()).getIsSsr = () => n.isSsr),
           (l = document.getElementById("_next")),
           { assetPrefix: t }
         )
@@ -5528,7 +5543,7 @@
                 children: (0, g.jsx)(F.PathParamsContext.Provider, {
                   value: (0, k.adaptForPathParams)(n),
                   children: (0, g.jsx)(v.RouterContext.Provider, {
-                    value: (0, N.makePublicRouterInstance)(n),
+                    value: (0, I.makePublicRouterInstance)(n),
                     children: (0, g.jsx)(y.HeadManagerContext.Provider, {
                       value: u,
                       children: (0, g.jsx)(M.ImageConfigContext.Provider, {
@@ -5537,7 +5552,7 @@
                             640, 750, 828, 1080, 1200, 1920, 2048, 3840,
                           ],
                           imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
-                          path: "/next/image/",
+                          path: "/13th_FRONT-END_ASSIGNMENT/yuno/week3/my-app/out/next/image/",
                           loader: "default",
                           dangerouslyAllowSVG: !1,
                           unoptimized: !1,
@@ -5600,7 +5615,7 @@
               return Promise.resolve(
                 (null == (i = e.props) ? void 0 : i.err)
                   ? e.props
-                  : (0, T.loadGetInitialProps)(t, f)
+                  : (0, j.loadGetInitialProps)(t, f)
               ).then((t) =>
                 ei({ ...e, err: l, Component: u, styleSheets: s, props: t })
               )
@@ -5632,7 +5647,7 @@
         )
       }
       function en() {
-        T.ST &&
+        j.ST &&
           (performance.mark(J.afterHydrate),
           performance.getEntriesByName(J.beforeRender, "mark").length &&
             (performance.measure(
@@ -5645,7 +5660,7 @@
           er())
       }
       function eo() {
-        if (!T.ST) return
+        if (!j.ST) return
         performance.mark(J.afterRender)
         let e = performance.getEntriesByName(J.routeChange, "mark")
         e.length &&
@@ -5757,14 +5772,14 @@
                 z(o, d),
                 (0, g.jsx)(A.Portal, {
                   type: "next-route-announcer",
-                  children: (0, g.jsx)(I.RouteAnnouncer, {}),
+                  children: (0, g.jsx)(N.RouteAnnouncer, {}),
                 }),
               ],
             }),
           ],
         })
         var y = l
-        T.ST && performance.mark(J.beforeRender)
+        j.ST && performance.mark(J.beforeRender)
         let P =
           ((t = et ? en : eo),
           (0, g.jsx)(ea, { callbacks: [t, _], children: m }))
@@ -5835,7 +5850,7 @@
         }
         window._next_PRELOADREADY &&
           (await window._next_PRELOADREADY(o.dynamicIds)),
-          (n = (0, N.createRouter)(o.page, o.query, a, {
+          (n = (0, I.createRouter)(o.page, o.query, a, {
             initialProps: o.props,
             pageLoader: i,
             App: f,

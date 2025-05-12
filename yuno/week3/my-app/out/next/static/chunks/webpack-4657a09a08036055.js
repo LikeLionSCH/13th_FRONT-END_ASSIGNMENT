@@ -156,7 +156,7 @@
       )
     })(),
     (r.tu = (e) => r.tt().createScriptURL(e)),
-    (r.p = "/next/"),
+    (r.p = "/13th_FRONT-END_ASSIGNMENT/yuno/week3/my-app/out/next/"),
     (() => {
       var e = { 68: 0, 150: 0, 331: 0 }
       ;(r.f.j = (t, o) => {

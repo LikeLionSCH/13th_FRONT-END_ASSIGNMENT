@@ -2469,23 +2469,29 @@
     },
     3102: (e, t, r) => {
       "use strict"
-      function n(e) {
-        return e
-      }
       Object.defineProperty(t, "__esModule", { value: !0 }),
         Object.defineProperty(t, "removeBasePath", {
           enumerable: !0,
           get: function () {
-            return n
+            return o
           },
         }),
-        r(3786),
-        ("function" == typeof t.default ||
-          ("object" == typeof t.default && null !== t.default)) &&
-          void 0 === t.default.__esModule &&
-          (Object.defineProperty(t.default, "__esModule", { value: !0 }),
-          Object.assign(t.default, t),
-          (e.exports = t.default))
+        r(3786)
+      let n = "/13th_FRONT-END_ASSIGNMENT/yuno/week3/my-app/out"
+      function o(e) {
+        return (
+          0 === n.length ||
+            (e = e.slice(n.length)).startsWith("/") ||
+            (e = "/" + e),
+          e
+        )
+      }
+      ;("function" == typeof t.default ||
+        ("object" == typeof t.default && null !== t.default)) &&
+        void 0 === t.default.__esModule &&
+        (Object.defineProperty(t.default, "__esModule", { value: !0 }),
+        Object.assign(t.default, t),
+        (e.exports = t.default))
     },
     3139: (e, t) => {
       "use strict"
@@ -3525,7 +3531,10 @@
         })
       let n = r(7431)
       function o(e) {
-        return (0, n.pathHasPrefix)(e, "")
+        return (0, n.pathHasPrefix)(
+          e,
+          "/13th_FRONT-END_ASSIGNMENT/yuno/week3/my-app/out"
+        )
       }
       ;("function" == typeof t.default ||
         ("object" == typeof t.default && null !== t.default)) &&
@@ -4625,7 +4634,12 @@
       let n = r(2094),
         o = r(6970)
       function u(e, t) {
-        return (0, o.normalizePathTrailingSlash)((0, n.addPathPrefix)(e, ""))
+        return (0, o.normalizePathTrailingSlash)(
+          (0, n.addPathPrefix)(
+            e,
+            "/13th_FRONT-END_ASSIGNMENT/yuno/week3/my-app/out"
+          )
+        )
       }
       ;("function" == typeof t.default ||
         ("object" == typeof t.default && null !== t.default)) &&
