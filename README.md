@@ -39,7 +39,7 @@
 
 ### week3
 
-최유진
+최유진 <br/>
 <a href="https://likelionsch.github.io/13th_FRONT-END_ASSIGNMENT/yuno/week3/my-app/out">김윤오</a> <br/>
 <a href="https://likelionsch.github.io/13th_FRONT-END_ASSIGNMENT/namkyung/week3/chat-ui/out">이남경</a> <br/>
-정채환
+<a href="https://likelionsch.github.io/13th_FRONT-END_ASSIGNMENT/chaehwan/week3/my-app/out">정채환</a> <br/>

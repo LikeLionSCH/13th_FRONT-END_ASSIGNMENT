@@ -82,13 +82,13 @@
             return f
           },
           APP_DIR_ALIAS: function () {
-            return I
+            return N
           },
           CACHE_ONE_YEAR: function () {
             return R
           },
           DOTnext_ALIAS: function () {
-            return C
+            return w
           },
           ESLINT_DEFAULT_DIRS: function () {
             return $
@@ -106,7 +106,7 @@
             return O
           },
           INSTRUMENTATION_HOOK_FILENAME: function () {
-            return T
+            return j
           },
           MATCHED_PATH_HEADER: function () {
             return o
@@ -115,7 +115,7 @@
             return S
           },
           MIDDLEWARE_LOCATION_REGEXP: function () {
-            return j
+            return T
           },
           NEXT_BODY_SUFFIX: function () {
             return h
@@ -169,13 +169,13 @@
             return i
           },
           PUBLIC_DIR_MIDDLEWARE_CONFLICT: function () {
-            return k
+            return U
           },
           ROOT_DIR_ALIAS: function () {
-            return w
+            return C
           },
           RSC_ACTION_CLIENT_WRAPPER_ALIAS: function () {
-            return U
+            return k
           },
           RSC_ACTION_ENCRYPTION_ALIAS: function () {
             return D
@@ -190,13 +190,13 @@
             return L
           },
           RSC_MOD_REF_PROXY_ALIAS: function () {
-            return N
+            return I
           },
           RSC_PREFETCH_SUFFIX: function () {
-            return l
+            return u
           },
           RSC_SEGMENTS_DIR_SUFFIX: function () {
-            return u
+            return l
           },
           RSC_SEGMENT_SUFFIX: function () {
             return s
@@ -240,8 +240,8 @@
         o = "x-matched-path",
         a = "x-prerender-revalidate",
         i = "x-prerender-revalidate-if-generated",
-        l = ".prefetch.rsc",
-        u = ".segments",
+        u = ".prefetch.rsc",
+        l = ".segments",
         s = ".segment.rsc",
         c = ".rsc",
         f = ".action",
@@ -259,19 +259,19 @@
         R = 31536e3,
         O = 0xfffffffe,
         S = "middleware",
-        j = `(?:src/)?${S}`,
-        T = "instrumentation",
+        T = `(?:src/)?${S}`,
+        j = "instrumentation",
         A = "private-next-pages",
-        C = "private-dot-next",
-        w = "private-next-root-dir",
-        I = "private-next-app-dir",
-        N = "private-next-rsc-mod-ref-proxy",
+        w = "private-dot-next",
+        C = "private-next-root-dir",
+        N = "private-next-app-dir",
+        I = "private-next-rsc-mod-ref-proxy",
         x = "private-next-rsc-action-validate",
         M = "private-next-rsc-server-reference",
         L = "private-next-rsc-cache-wrapper",
         D = "private-next-rsc-action-encryption",
-        U = "private-next-rsc-action-client-wrapper",
-        k =
+        k = "private-next-rsc-action-client-wrapper",
+        U =
           "You can not have a 'next' folder inside of your public folder. This conflicts with the internal '/next' route. https://nextjs.org/docs/messages/public-next-folder-conflict",
         F =
           "You can not use getInitialProps with getStaticProps. To use SSG, please remove your getInitialProps",
@@ -358,16 +358,16 @@
         Object.defineProperty(t, "onRecoverableError", {
           enumerable: !0,
           get: function () {
-            return u
+            return l
           },
         })
       let n = r(1532),
         o = r(9175),
         a = r(6453),
         i = r(4883),
-        l = n._(r(2038)),
-        u = (e, t) => {
-          let r = (0, l.default)(e) && "cause" in e ? e.cause : e,
+        u = n._(r(2038)),
+        l = (e, t) => {
+          let r = (0, u.default)(e) && "cause" in e ? e.cause : e,
             n = (0, i.getReactStitchedError)(r)
           ;(0, o.isBailoutToCSRError)(r) || (0, a.reportGlobalError)(n)
         }
@@ -411,7 +411,12 @@
       let n = r(821),
         o = r(9401)
       function a(e, t) {
-        return (0, o.normalizePathTrailingSlash)((0, n.addPathPrefix)(e, ""))
+        return (0, o.normalizePathTrailingSlash)(
+          (0, n.addPathPrefix)(
+            e,
+            "/13th_FRONT-END_ASSIGNMENT/namkyung/week3/chat-ui/out"
+          )
+        )
       }
       ;("function" == typeof t.default ||
         ("object" == typeof t.default && null !== t.default)) &&
@@ -462,7 +467,7 @@
         o = r(2859),
         a = r(6947),
         i = r(7268)
-      function l(e, t, r) {
+      function u(e, t, r) {
         let n,
           o = t.get(e)
         if (o) return "future" in o ? o.future : Promise.resolve(o)
@@ -480,12 +485,12 @@
             : a
         )
       }
-      let u = Symbol("ASSET_LOAD_ERROR")
+      let l = Symbol("ASSET_LOAD_ERROR")
       function s(e) {
-        return Object.defineProperty(e, u, {})
+        return Object.defineProperty(e, l, {})
       }
       function c(e) {
-        return e && u in e
+        return e && l in e
       }
       let f = (function (e) {
           try {
@@ -588,7 +593,7 @@
                 n)
           }
         }
-        function u(e) {
+        function l(e) {
           let t = n.get(e)
           return (
             t ||
@@ -612,7 +617,7 @@
           )
         }
         return {
-          whenEntrypoint: (e) => l(e, t),
+          whenEntrypoint: (e) => u(e, t),
           onEntrypoint(e, r) {
             ;(r
               ? Promise.resolve()
@@ -630,7 +635,7 @@
             })
           },
           loadRoute(r, n) {
-            return l(r, a, () => {
+            return u(r, a, () => {
               let o
               return p(
                 _(e, r)
@@ -638,7 +643,7 @@
                     let { scripts: n, css: o } = e
                     return Promise.all([
                       t.has(r) ? [] : Promise.all(n.map(i)),
-                      Promise.all(o.map(u)),
+                      Promise.all(o.map(l)),
                     ])
                   })
                   .then((e) =>
@@ -807,15 +812,15 @@
             return h
           },
           withRouter: function () {
-            return u.default
+            return l.default
           },
         })
       let n = r(1532),
         o = n._(r(148)),
         a = n._(r(1392)),
         i = r(4776),
-        l = n._(r(2038)),
-        u = n._(r(2991)),
+        u = n._(r(2038)),
+        l = n._(r(2991)),
         s = {
           router: null,
           readyCallbacks: [],
@@ -882,7 +887,7 @@
                 } catch (e) {
                   console.error("Error when running the Router event: " + o),
                     console.error(
-                      (0, l.default)(e) ? e.message + "\n" + e.stack : e + ""
+                      (0, u.default)(e) ? e.message + "\n" + e.stack : e + ""
                     )
                 }
             })
@@ -1011,16 +1016,16 @@
             return f
           },
           parseParameter: function () {
-            return u
+            return l
           },
         })
       let n = r(474),
         o = r(3784),
         a = r(8920),
         i = r(2618),
-        l = /^([^[]*)\[((?:\[[^\]]*\])|[^\]]+)\](.*)$/
-      function u(e) {
-        let t = e.match(l)
+        u = /^([^[]*)\[((?:\[[^\]]*\])|[^\]]+)\](.*)$/
+      function l(e) {
+        let t = e.match(u)
         return t ? s(t[2]) : s(e)
       }
       function s(e) {
@@ -1031,21 +1036,21 @@
       }
       function c(e, t, r) {
         let n = {},
-          u = 1,
+          l = 1,
           c = []
         for (let f of (0, i.removeTrailingSlash)(e).slice(1).split("/")) {
           let e = o.INTERCEPTION_ROUTE_MARKERS.find((e) => f.startsWith(e)),
-            i = f.match(l)
+            i = f.match(u)
           if (e && i && i[2]) {
             let { key: t, optional: r, repeat: o } = s(i[2])
-            ;(n[t] = { pos: u++, repeat: o, optional: r }),
+            ;(n[t] = { pos: l++, repeat: o, optional: r }),
               c.push("/" + (0, a.escapeStringRegexp)(e) + "([^/]+?)")
           } else if (i && i[2]) {
             let { key: e, repeat: t, optional: o } = s(i[2])
-            ;(n[e] = { pos: u++, repeat: t, optional: o }),
+            ;(n[e] = { pos: l++, repeat: t, optional: o }),
               r && i[1] && c.push("/" + (0, a.escapeStringRegexp)(i[1]))
-            let l = t ? (o ? "(?:/(.+?))?" : "/(.+?)") : "/([^/]+?)"
-            r && i[1] && (l = l.substring(1)), c.push(l)
+            let u = t ? (o ? "(?:/(.+?))?" : "/(.+?)") : "/([^/]+?)"
+            r && i[1] && (u = u.substring(1)), c.push(u)
           } else c.push("/" + (0, a.escapeStringRegexp)(f))
           t && i && i[3] && c.push((0, a.escapeStringRegexp)(i[3]))
         }
@@ -1058,8 +1063,8 @@
             excludeOptionalTrailingSlash: o = !1,
           } = void 0 === t ? {} : t,
           { parameterizedRoute: a, groups: i } = c(e, r, n),
-          l = a
-        return o || (l += "(?:/)?"), { re: RegExp("^" + l + "$"), groups: i }
+          u = a
+        return o || (u += "(?:/)?"), { re: RegExp("^" + u + "$"), groups: i }
       }
       function d(e) {
         let t,
@@ -1068,22 +1073,22 @@
             getSafeRouteKey: n,
             segment: o,
             routeKeys: i,
-            keyPrefix: l,
-            backreferenceDuplicateKeys: u,
+            keyPrefix: u,
+            backreferenceDuplicateKeys: l,
           } = e,
           { key: c, optional: f, repeat: d } = s(o),
           p = c.replace(/\W/g, "")
-        l && (p = "" + l + p)
+        u && (p = "" + u + p)
         let h = !1
         ;(0 === p.length || p.length > 30) && (h = !0),
           isNaN(parseInt(p.slice(0, 1))) || (h = !0),
           h && (p = n())
         let _ = p in i
-        l ? (i[p] = "" + l + c) : (i[p] = c)
+        u ? (i[p] = "" + u + c) : (i[p] = c)
         let m = r ? (0, a.escapeStringRegexp)(r) : ""
         return (
           (t =
-            _ && u
+            _ && l
               ? "\\k<" + p + ">"
               : d
               ? "(?<" + p + ">.+?)"
@@ -1091,7 +1096,7 @@
           f ? "(?:/" + m + t + ")?" : "/" + m + t
         )
       }
-      function p(e, t, r, u, s) {
+      function p(e, t, r, l, s) {
         let c,
           f =
             ((c = 0),
@@ -1107,7 +1112,7 @@
           h = []
         for (let c of (0, i.removeTrailingSlash)(e).slice(1).split("/")) {
           let e = o.INTERCEPTION_ROUTE_MARKERS.some((e) => c.startsWith(e)),
-            i = c.match(l)
+            i = c.match(u)
           if (e && i && i[2])
             h.push(
               d({
@@ -1120,7 +1125,7 @@
               })
             )
           else if (i && i[2]) {
-            u && i[1] && h.push("/" + (0, a.escapeStringRegexp)(i[1]))
+            l && i[1] && h.push("/" + (0, a.escapeStringRegexp)(i[1]))
             let e = d({
               getSafeRouteKey: f,
               segment: i[2],
@@ -1128,7 +1133,7 @@
               keyPrefix: t ? n.NEXT_QUERY_PARAM_PREFIX : void 0,
               backreferenceDuplicateKeys: s,
             })
-            u && i[1] && (e = e.substring(1)), h.push(e)
+            l && i[1] && (e = e.substring(1)), h.push(e)
           } else h.push("/" + (0, a.escapeStringRegexp)(c))
           r && i && i[3] && h.push((0, a.escapeStringRegexp)(i[3]))
         }
@@ -1189,8 +1194,8 @@
         o = r(2388),
         a = r(1154),
         i = r(5574),
-        l = r(9401),
-        u = r(5201),
+        u = r(9401),
+        l = r(5201),
         s = r(6681),
         c = r(5905)
       function f(e, t, r) {
@@ -1209,7 +1214,7 @@
           let t = (0, i.normalizeRepeatedSlashes)(h)
           d = (p ? p[0] : "") + t
         }
-        if (!(0, u.isLocalURL)(d)) return r ? [d] : d
+        if (!(0, l.isLocalURL)(d)) return r ? [d] : d
         try {
           f = new URL(d.startsWith("#") ? e.asPath : e.pathname, "http://n")
         } catch (e) {
@@ -1217,11 +1222,11 @@
         }
         try {
           let e = new URL(d, f)
-          e.pathname = (0, l.normalizePathTrailingSlash)(e.pathname)
+          e.pathname = (0, u.normalizePathTrailingSlash)(e.pathname)
           let t = ""
           if ((0, s.isDynamicRoute)(e.pathname) && e.searchParams && r) {
             let r = (0, n.searchParamsToUrlQuery)(e.searchParams),
-              { result: i, params: l } = (0, c.interpolateAs)(
+              { result: i, params: u } = (0, c.interpolateAs)(
                 e.pathname,
                 e.pathname,
                 r
@@ -1230,7 +1235,7 @@
               (t = (0, o.formatWithValidation)({
                 pathname: i,
                 hash: e.hash,
-                query: (0, a.omit)(r, l),
+                query: (0, a.omit)(r, u),
               }))
           }
           let i = e.origin === f.origin ? e.href.slice(e.origin.length) : e.href
@@ -1276,8 +1281,8 @@
         o = r(8781),
         a = r(2618),
         i = r(892),
-        l = r(1696),
-        u = o._(r(2038)),
+        u = r(1696),
+        l = o._(r(2038)),
         s = r(1079),
         c = r(3826),
         f = n._(r(4963)),
@@ -1297,13 +1302,13 @@
         R = r(2043),
         O = r(1181),
         S = r(8020),
-        j = r(9595),
-        T = r(9344),
+        T = r(9595),
+        j = r(9344),
         A = r(4347),
-        C = r(5201),
-        w = r(4675),
-        I = r(1154),
-        N = r(5905),
+        w = r(5201),
+        C = r(4675),
+        N = r(1154),
+        I = r(5905),
         x = r(5168),
         M = r(474)
       function L() {
@@ -1324,19 +1329,19 @@
           o = (0, v.addBasePath)((0, E.addLocale)(n, e.locale))
         return t.some((e) => new RegExp(e.regexp).test(o))
       }
-      function U(e) {
+      function k(e) {
         let t = (0, d.getLocationOrigin)()
         return e.startsWith(t) ? e.substring(t.length) : e
       }
-      function k(e, t, r) {
+      function U(e, t, r) {
         let [n, o] = (0, O.resolveHref)(e, t, !0),
           a = (0, d.getLocationOrigin)(),
           i = n.startsWith(a),
-          l = o && o.startsWith(a)
-        ;(n = U(n)), (o = o ? U(o) : o)
-        let u = i ? n : (0, v.addBasePath)(n),
-          s = r ? U((0, O.resolveHref)(e, r)) : o || n
-        return { url: u, as: l ? s : (0, v.addBasePath)(s) }
+          u = o && o.startsWith(a)
+        ;(n = k(n)), (o = o ? k(o) : o)
+        let l = i ? n : (0, v.addBasePath)(n),
+          s = r ? k((0, O.resolveHref)(e, r)) : o || n
+        return { url: l, as: u ? s : (0, v.addBasePath)(s) }
       }
       function F(e, t) {
         let r = (0, a.removeTrailingSlash)((0, s.denormalizePagePath)(e))
@@ -1362,30 +1367,30 @@
                 trailingSlash: !0,
               },
               o = t.headers.get("x-nextjs-rewrite"),
-              l = o || t.headers.get("x-nextjs-matched-path"),
-              u = t.headers.get(M.MATCHED_PATH_HEADER)
+              u = o || t.headers.get("x-nextjs-matched-path"),
+              l = t.headers.get(M.MATCHED_PATH_HEADER)
             if (
-              (!u ||
-                l ||
-                u.includes("_next_data_catchall") ||
-                u.includes("/_error") ||
-                u.includes("/404") ||
-                (l = u),
-              l)
+              (!l ||
+                u ||
+                l.includes("_next_data_catchall") ||
+                l.includes("/_error") ||
+                l.includes("/404") ||
+                (u = l),
+              u)
             ) {
-              if (l.startsWith("/")) {
-                let t = (0, h.parseRelativeUrl)(l),
-                  u = (0, j.getNextPathnameInfo)(t.pathname, {
+              if (u.startsWith("/")) {
+                let t = (0, h.parseRelativeUrl)(u),
+                  l = (0, T.getNextPathnameInfo)(t.pathname, {
                     nextConfig: n,
                     parseData: !0,
                   }),
-                  s = (0, a.removeTrailingSlash)(u.pathname)
+                  s = (0, a.removeTrailingSlash)(l.pathname)
                 return Promise.all([
                   r.router.pageLoader.getPageList(),
                   (0, i.getClientBuildManifest)(),
                 ]).then((a) => {
-                  let [i, { __rewrites: l }] = a,
-                    f = (0, E.addLocale)(u.pathname, u.locale)
+                  let [i, { __rewrites: u }] = a,
+                    f = (0, E.addLocale)(l.pathname, l.locale)
                   if (
                     (0, p.isDynamicRoute)(f) ||
                     (!o &&
@@ -1396,7 +1401,7 @@
                         ).pathname
                       ))
                   ) {
-                    let r = (0, j.getNextPathnameInfo)(
+                    let r = (0, T.getNextPathnameInfo)(
                       (0, h.parseRelativeUrl)(e).pathname,
                       { nextConfig: n, parseData: !0 }
                     )
@@ -1427,8 +1432,8 @@
                 type: "redirect-external",
                 destination:
                   "" +
-                  (0, T.formatNextPathnameInfo)({
-                    ...(0, j.getNextPathnameInfo)(t.pathname, {
+                  (0, j.formatNextPathnameInfo)({
+                    ...(0, T.getNextPathnameInfo)(t.pathname, {
                       nextConfig: n,
                       parseData: !0,
                     }),
@@ -1443,8 +1448,8 @@
             if (s) {
               if (s.startsWith("/")) {
                 let e = (0, b.parsePath)(s),
-                  t = (0, T.formatNextPathnameInfo)({
-                    ...(0, j.getNextPathnameInfo)(e.pathname, {
+                  t = (0, j.formatNextPathnameInfo)({
+                    ...(0, T.getNextPathnameInfo)(e.pathname, {
                       nextConfig: n,
                       parseData: !0,
                     }),
@@ -1488,8 +1493,8 @@
             isPrefetch: n,
             hasMiddleware: o,
             isServerRender: a,
-            parseJSON: l,
-            persistCache: u,
+            parseJSON: u,
+            persistCache: l,
             isBackground: s,
             unstable_skipClientCache: c,
           } = e,
@@ -1543,16 +1548,16 @@
                               cacheKey: f,
                             }
                         }
-                        let l = Object.defineProperty(
+                        let u = Object.defineProperty(
                           Error("Failed to load static props"),
                           "_next_ERROR_CODE",
                           { value: "E124", enumerable: !1, configurable: !0 }
                         )
-                        throw (a || (0, i.markAssetError)(l), l)
+                        throw (a || (0, i.markAssetError)(u), u)
                       }
                       return {
                         dataHref: t,
-                        json: l ? X(e) : null,
+                        json: u ? X(e) : null,
                         response: r,
                         text: e,
                         cacheKey: f,
@@ -1561,7 +1566,7 @@
               )
               .then(
                 (e) => (
-                  (u &&
+                  (l &&
                     "no-cache" !==
                       e.response.headers.get("x-middleware-cache")) ||
                     delete r[f],
@@ -1580,7 +1585,7 @@
                 )
               })
           }
-        return c && u
+        return c && l
           ? d({}).then(
               (e) => (
                 "no-cache" !== e.response.headers.get("x-middleware-cache") &&
@@ -1641,14 +1646,14 @@
         push(e, t, r) {
           return (
             void 0 === r && (r = {}),
-            ({ url: e, as: t } = k(this, e, t)),
+            ({ url: e, as: t } = U(this, e, t)),
             this.change("pushState", e, t, r)
           )
         }
         replace(e, t, r) {
           return (
             void 0 === r && (r = {}),
-            ({ url: e, as: t } = k(this, e, t)),
+            ({ url: e, as: t } = U(this, e, t)),
             this.change("replaceState", e, t, r)
           )
         }
@@ -1657,7 +1662,7 @@
             if (!this._bfl_s && !this._bfl_d) {
               let t,
                 a,
-                { BloomFilter: l } = r(8409)
+                { BloomFilter: u } = r(8409)
               try {
                 ;({ __routerFilterStatic: t, __routerFilterDynamic: a } =
                   await (0, i.getClientBuildManifest)())
@@ -1674,10 +1679,10 @@
                 )
               }
               ;(null == t ? void 0 : t.numHashes) &&
-                ((this._bfl_s = new l(t.numItems, t.errorRate)),
+                ((this._bfl_s = new u(t.numItems, t.errorRate)),
                 this._bfl_s.import(t)),
                 (null == a ? void 0 : a.numHashes) &&
-                  ((this._bfl_d = new l(a.numItems, a.errorRate)),
+                  ((this._bfl_d = new u(a.numItems, a.errorRate)),
                   this._bfl_d.import(a))
             }
             let c = !1,
@@ -1695,11 +1700,11 @@
                       new URL(this.asPath, "http://n").pathname
                     )
                 ) {
-                  var l, u, s
+                  var u, l, s
                   for (let e of ((c =
                     c ||
-                    !!(null == (l = this._bfl_s) ? void 0 : l.contains(t)) ||
-                    !!(null == (u = this._bfl_s) ? void 0 : u.contains(d))),
+                    !!(null == (u = this._bfl_s) ? void 0 : u.contains(t)) ||
+                    !!(null == (l = this._bfl_s) ? void 0 : l.contains(d))),
                   [t, d])) {
                     let t = e.split("/")
                     for (let e = 0; !f && e < t.length + 1; e++) {
@@ -1735,9 +1740,9 @@
           return !1
         }
         async change(e, t, r, n, o) {
-          var s, c, f, O, S, j, T, w, x
-          let M, U
-          if (!(0, C.isLocalURL)(t)) return q({ url: t, router: this }), !1
+          var s, c, f, O, S, T, j, C, x
+          let M, k
+          if (!(0, w.isLocalURL)(t)) return q({ url: t, router: this }), !1
           let B = 1 === n._h
           B || n.shallow || (await this._bfl(r, void 0, n.locale))
           let X =
@@ -1781,7 +1786,7 @@
               await this.set(W, this.components[W.route], null)
             } catch (e) {
               throw (
-                ((0, u.default)(e) &&
+                ((0, l.default)(e) &&
                   e.cancelled &&
                   z.events.emit("routeChangeError", e, J, Q),
                 e)
@@ -1792,7 +1797,7 @@
           let ee = (0, h.parseRelativeUrl)(t),
             { pathname: et, query: er } = ee
           try {
-            ;[M, { __rewrites: U }] = await Promise.all([
+            ;[M, { __rewrites: k }] = await Promise.all([
               this.pageLoader.getPageList(),
               (0, i.getClientBuildManifest)(),
               this.pageLoader.getMiddleware(),
@@ -1813,11 +1818,11 @@
               (!(0, p.isDynamicRoute)(eo) ||
                 !(0, _.getRouteMatcher)((0, m.getRouteRegex)(eo))(ea))
             ),
-            el =
+            eu =
               !n.shallow &&
               (await D({ asPath: r, locale: W.locale, router: this }))
           if (
-            (B && el && (X = !1),
+            (B && eu && (X = !1),
             X &&
               "/_error" !== et &&
               ((n._shouldResolveHref = !0),
@@ -1825,34 +1830,34 @@
               ee.pathname !== et &&
                 ((et = ee.pathname),
                 (ee.pathname = (0, v.addBasePath)(et)),
-                el || (t = (0, g.formatWithValidation)(ee)))),
-            !(0, C.isLocalURL)(r))
+                eu || (t = (0, g.formatWithValidation)(ee)))),
+            !(0, w.isLocalURL)(r))
           )
             return q({ url: r, router: this }), !1
           ;(en = (0, y.removeLocale)((0, P.removeBasePath)(en), W.locale)),
             (eo = (0, a.removeTrailingSlash)(et))
-          let eu = !1
+          let el = !1
           if ((0, p.isDynamicRoute)(eo)) {
             let e = (0, h.parseRelativeUrl)(en),
               n = e.pathname,
               o = (0, m.getRouteRegex)(eo)
-            eu = (0, _.getRouteMatcher)(o)(n)
+            el = (0, _.getRouteMatcher)(o)(n)
             let a = eo === n,
-              i = a ? (0, N.interpolateAs)(eo, n, er) : {}
-            if (eu && (!a || i.result))
+              i = a ? (0, I.interpolateAs)(eo, n, er) : {}
+            if (el && (!a || i.result))
               a
                 ? (r = (0, g.formatWithValidation)(
                     Object.assign({}, e, {
                       pathname: i.result,
-                      query: (0, I.omit)(er, i.params),
+                      query: (0, N.omit)(er, i.params),
                     })
                   ))
-                : Object.assign(er, eu)
+                : Object.assign(er, el)
             else {
               let e = Object.keys(o.groups).filter(
                 (e) => !er[e] && !o.groups[e].optional
               )
-              if (e.length > 0 && !el)
+              if (e.length > 0 && !eu)
                 throw Object.defineProperty(
                   Error(
                     (a
@@ -1886,7 +1891,7 @@
               routeProps: Q,
               locale: W.locale,
               isPreview: W.isPreview,
-              hasMiddleware: el,
+              hasMiddleware: eu,
               unstable_skipClientCache: n.unstable_skipClientCache,
               isQueryUpdating: B && !this.isFallback,
               isMiddlewareRewrite: ei,
@@ -1899,7 +1904,7 @@
                   "resolvedAs" in a ? a.resolvedAs : void 0,
                   W.locale
                 )),
-              "route" in a && el)
+              "route" in a && eu)
             ) {
               ;(eo = et = a.route || eo),
                 Q.shallow || (er = Object.assign({}, a.query || {}, er))
@@ -1907,10 +1912,10 @@
                 ? (0, P.removeBasePath)(ee.pathname)
                 : ee.pathname
               if (
-                (eu &&
+                (el &&
                   et !== e &&
-                  Object.keys(eu).forEach((e) => {
-                    eu && er[e] === eu[e] && delete er[e]
+                  Object.keys(el).forEach((e) => {
+                    el && er[e] === el[e] && delete er[e]
                   }),
                 (0, p.isDynamicRoute)(et))
               ) {
@@ -1944,7 +1949,7 @@
               (i &&
                 i.unstable_scriptLoader &&
                 [].concat(i.unstable_scriptLoader()).forEach((e) => {
-                  ;(0, l.handleClientScriptLoad)(e.props)
+                  ;(0, u.handleClientScriptLoad)(e.props)
                 }),
               (a.__N_SSG || a.__N_SSP) && a.props)
             ) {
@@ -1957,7 +1962,7 @@
                 ) {
                   let r = (0, h.parseRelativeUrl)(t)
                   r.pathname = F(r.pathname, M)
-                  let { url: o, as: a } = k(this, t, t)
+                  let { url: o, as: a } = U(this, t, t)
                   return this.change(e, o, a, n)
                 }
                 return q({ url: t, router: this }), new Promise(() => {})
@@ -2001,7 +2006,7 @@
               (null == (O = a.props) ? void 0 : O.pageProps) &&
               (a.props.pageProps.statusCode = 500)
             let s = n.shallow && W.route === (null != (S = a.route) ? S : eo),
-              d = null != (j = n.scroll) ? j : !B && !s,
+              d = null != (T = n.scroll) ? T : !B && !s,
               g = null != o ? o : d ? { x: 0, y: 0 } : null,
               b = {
                 ...W,
@@ -2032,17 +2037,17 @@
                   { value: "E225", enumerable: !1, configurable: !0 }
                 )
               "/_error" === this.pathname &&
-                (null == (w = self._next_DATA__.props) ||
-                null == (T = w.pageProps)
+                (null == (C = self._next_DATA__.props) ||
+                null == (j = C.pageProps)
                   ? void 0
-                  : T.statusCode) === 500 &&
+                  : j.statusCode) === 500 &&
                 (null == (x = a.props) ? void 0 : x.pageProps) &&
                 (a.props.pageProps.statusCode = 500)
               try {
                 await this.set(b, a, g)
               } catch (e) {
                 throw (
-                  ((0, u.default)(e) &&
+                  ((0, l.default)(e) &&
                     e.cancelled &&
                     z.events.emit("routeChangeError", e, J, Q),
                   e)
@@ -2077,7 +2082,7 @@
             }
             return !0
           } catch (e) {
-            if ((0, u.default)(e) && e.cancelled) return !1
+            if ((0, l.default)(e) && e.cancelled) return !1
             throw e
           }
         }
@@ -2126,7 +2131,7 @@
             return i
           } catch (e) {
             return this.handleRouteInfoError(
-              (0, u.default)(e)
+              (0, l.default)(e)
                 ? e
                 : Object.defineProperty(Error(e + ""), "_next_ERROR_CODE", {
                     value: "E394",
@@ -2148,7 +2153,7 @@
               query: n,
               as: o,
               resolvedAs: i,
-              routeProps: l,
+              routeProps: u,
               locale: s,
               hasMiddleware: f,
               isPreview: d,
@@ -2161,10 +2166,10 @@
           try {
             var E, y, v, R
             let e = this.components[b]
-            if (l.shallow && e && this.route === b) return e
+            if (u.shallow && e && this.route === b) return e
             let t = V({ route: b, router: this })
             f && (e = void 0)
-            let u = !e || "initial" in e ? void 0 : e,
+            let l = !e || "initial" in e ? void 0 : e,
               O = {
                 dataHref: this.pageLoader.getDataHref({
                   href: (0, g.formatWithValidation)({ pathname: r, query: n }),
@@ -2181,7 +2186,7 @@
                 unstable_skipClientCache: p,
                 isBackground: h,
               },
-              j =
+              T =
                 h && !_
                   ? null
                   : await B({
@@ -2194,44 +2199,44 @@
                       throw e
                     })
             if (
-              (j && ("/_error" === r || "/404" === r) && (j.effect = void 0),
+              (T && ("/_error" === r || "/404" === r) && (T.effect = void 0),
               h &&
-                (j
-                  ? (j.json = self._next_DATA__.props)
-                  : (j = { json: self._next_DATA__.props })),
+                (T
+                  ? (T.json = self._next_DATA__.props)
+                  : (T = { json: self._next_DATA__.props })),
               t(),
-              (null == j || null == (E = j.effect) ? void 0 : E.type) ===
+              (null == T || null == (E = T.effect) ? void 0 : E.type) ===
                 "redirect-internal" ||
-                (null == j || null == (y = j.effect) ? void 0 : y.type) ===
+                (null == T || null == (y = T.effect) ? void 0 : y.type) ===
                   "redirect-external")
             )
-              return j.effect
+              return T.effect
             if (
-              (null == j || null == (v = j.effect) ? void 0 : v.type) ===
+              (null == T || null == (v = T.effect) ? void 0 : v.type) ===
               "rewrite"
             ) {
-              let t = (0, a.removeTrailingSlash)(j.effect.resolvedHref),
+              let t = (0, a.removeTrailingSlash)(T.effect.resolvedHref),
                 o = await this.pageLoader.getPageList()
               if (
                 (!h || o.includes(t)) &&
                 ((b = t),
-                (r = j.effect.resolvedHref),
-                (n = { ...n, ...j.effect.parsedAs.query }),
+                (r = T.effect.resolvedHref),
+                (n = { ...n, ...T.effect.parsedAs.query }),
                 (i = (0, P.removeBasePath)(
                   (0, c.normalizeLocalePath)(
-                    j.effect.parsedAs.pathname,
+                    T.effect.parsedAs.pathname,
                     this.locales
                   ).pathname
                 )),
                 (e = this.components[b]),
-                l.shallow && e && this.route === b && !f)
+                u.shallow && e && this.route === b && !f)
               )
                 return { ...e, route: b }
             }
             if ((0, S.isAPIRoute)(b))
               return q({ url: o, router: this }), new Promise(() => {})
-            let T =
-                u ||
+            let j =
+                l ||
                 (await this.fetchComponent(b).then((e) => ({
                   Component: e.page,
                   styleSheets: e.styleSheets,
@@ -2239,19 +2244,19 @@
                   __N_SSP: e.mod.__N_SSP,
                 }))),
               A =
-                null == j || null == (R = j.response)
+                null == T || null == (R = T.response)
                   ? void 0
                   : R.headers.get("x-middleware-skip"),
-              C = T.__N_SSG || T.__N_SSP
+              w = j.__N_SSG || j.__N_SSP
             A &&
-              (null == j ? void 0 : j.dataHref) &&
-              delete this.sdc[j.dataHref]
-            let { props: w, cacheKey: I } = await this._getData(async () => {
-              if (C) {
-                if ((null == j ? void 0 : j.json) && !A)
-                  return { cacheKey: j.cacheKey, props: j.json }
-                let e = (null == j ? void 0 : j.dataHref)
-                    ? j.dataHref
+              (null == T ? void 0 : T.dataHref) &&
+              delete this.sdc[T.dataHref]
+            let { props: C, cacheKey: N } = await this._getData(async () => {
+              if (w) {
+                if ((null == T ? void 0 : T.json) && !A)
+                  return { cacheKey: T.cacheKey, props: T.json }
+                let e = (null == T ? void 0 : T.dataHref)
+                    ? T.dataHref
                     : this.pageLoader.getDataHref({
                         href: (0, g.formatWithValidation)({
                           pathname: r,
@@ -2273,7 +2278,7 @@
               }
               return {
                 headers: {},
-                props: await this.getInitialProps(T.Component, {
+                props: await this.getInitialProps(j.Component, {
                   pathname: r,
                   query: n,
                   asPath: o,
@@ -2284,9 +2289,9 @@
               }
             })
             return (
-              T.__N_SSP && O.dataHref && I && delete this.sdc[I],
+              j.__N_SSP && O.dataHref && N && delete this.sdc[N],
               this.isPreview ||
-                !T.__N_SSG ||
+                !j.__N_SSG ||
                 h ||
                 W(
                   Object.assign({}, O, {
@@ -2295,21 +2300,21 @@
                     inflightCache: this.sbc,
                   })
                 ).catch(() => {}),
-              (w.pageProps = Object.assign({}, w.pageProps)),
-              (T.props = w),
-              (T.route = b),
-              (T.query = n),
-              (T.resolvedAs = i),
-              (this.components[b] = T),
-              T
+              (C.pageProps = Object.assign({}, C.pageProps)),
+              (j.props = C),
+              (j.route = b),
+              (j.query = n),
+              (j.resolvedAs = i),
+              (this.components[b] = j),
+              j
             )
           } catch (e) {
             return this.handleRouteInfoError(
-              (0, u.getProperError)(e),
+              (0, l.getProperError)(e),
               r,
               n,
               o,
-              l
+              u
             )
           }
         }
@@ -2348,13 +2353,13 @@
           if (
             (void 0 === t && (t = e),
             void 0 === r && (r = {}),
-            (0, w.isBot)(window.navigator.userAgent))
+            (0, C.isBot)(window.navigator.userAgent))
           )
             return
           let n = (0, h.parseRelativeUrl)(e),
             o = n.pathname,
-            { pathname: i, query: l } = n,
-            u = i,
+            { pathname: i, query: u } = n,
+            l = i,
             s = await this.pageLoader.getPageList(),
             c = t,
             f = void 0 !== r.locale ? r.locale || void 0 : this.locale,
@@ -2364,7 +2369,7 @@
               ((i = n.pathname),
               (n.pathname = i),
               Object.assign(
-                l,
+                u,
                 (0, _.getRouteMatcher)((0, m.getRouteRegex)(n.pathname))(
                   (0, b.parsePath)(t).pathname
                 ) || {}
@@ -2374,7 +2379,7 @@
             fetchData: () =>
               W({
                 dataHref: this.pageLoader.getDataHref({
-                  href: (0, g.formatWithValidation)({ pathname: u, query: l }),
+                  href: (0, g.formatWithValidation)({ pathname: l, query: u }),
                   skipInterpolation: !0,
                   asPath: c,
                   locale: f,
@@ -2394,7 +2399,7 @@
             ((null == E ? void 0 : E.effect.type) === "rewrite" &&
               ((n.pathname = E.effect.resolvedHref),
               (i = E.effect.resolvedHref),
-              (l = { ...l, ...E.effect.parsedAs.query }),
+              (u = { ...u, ...E.effect.parsedAs.query }),
               (c = E.effect.parsedAs.pathname),
               (e = (0, g.formatWithValidation)(n))),
             (null == E ? void 0 : E.effect.type) === "redirect-external")
@@ -2502,8 +2507,8 @@
             initialProps: n,
             pageLoader: o,
             App: i,
-            wrapApp: l,
-            Component: u,
+            wrapApp: u,
+            Component: l,
             err: s,
             subscription: c,
             isFallback: f,
@@ -2541,12 +2546,12 @@
                 (r && this.locale === n.options.locale && n.as === this.asPath)
               )
                 return
-              let { url: o, as: a, options: i, key: l } = n
-              this._key = l
-              let { pathname: u } = (0, h.parseRelativeUrl)(o)
+              let { url: o, as: a, options: i, key: u } = n
+              this._key = u
+              let { pathname: l } = (0, h.parseRelativeUrl)(o)
               ;(!this.isSsr ||
                 a !== (0, v.addBasePath)(this.asPath) ||
-                u !== (0, v.addBasePath)(this.pathname)) &&
+                l !== (0, v.addBasePath)(this.pathname)) &&
                 (!this._bps || this._bps(n)) &&
                 this.change(
                   "replaceState",
@@ -2564,7 +2569,7 @@
           ;(this.components = {}),
             "/_error" !== e &&
               (this.components[P] = {
-                Component: u,
+                Component: l,
                 initial: !0,
                 props: n,
                 err: s,
@@ -2576,10 +2581,11 @@
             (this.pageLoader = o)
           let R = (0, p.isDynamicRoute)(e) && self._next_DATA__.autoExport
           if (
-            ((this.basePath = ""),
+            ((this.basePath =
+              "/13th_FRONT-END_ASSIGNMENT/namkyung/week3/chat-ui/out"),
             (this.sub = c),
             (this.clc = null),
-            (this._wrapApp = l),
+            (this._wrapApp = u),
             (this.isSsr = !0),
             (this.isLocaleDomain = !1),
             (this.isReady = !!(
@@ -2636,25 +2642,25 @@
         Object.defineProperty(t, "default", {
           enumerable: !0,
           get: function () {
-            return u
+            return l
           },
         })
       let n = r(1532),
         o = r(5640),
         a = n._(r(148)),
         i = r(5574)
-      async function l(e) {
+      async function u(e) {
         let { Component: t, ctx: r } = e
         return { pageProps: await (0, i.loadGetInitialProps)(t, r) }
       }
-      class u extends a.default.Component {
+      class l extends a.default.Component {
         render() {
           let { Component: e, pageProps: t } = this.props
           return (0, o.jsx)(e, { ...t })
         }
       }
-      ;(u.origGetInitialProps = l),
-        (u.getInitialProps = l),
+      ;(l.origGetInitialProps = u),
+        (l.getInitialProps = u),
         ("function" == typeof t.default ||
           ("object" == typeof t.default && null !== t.default)) &&
           void 0 === t.default.__esModule &&
@@ -2722,13 +2728,13 @@
       function a(e, t) {
         for (let [a, i] of Object.entries(t)) {
           if (!t.hasOwnProperty(a) || n.includes(a) || void 0 === i) continue
-          let l = r[a] || a.toLowerCase()
-          "SCRIPT" === e.tagName && o(l)
-            ? (e[l] = !!i)
-            : e.setAttribute(l, String(i)),
+          let u = r[a] || a.toLowerCase()
+          "SCRIPT" === e.tagName && o(u)
+            ? (e[u] = !!i)
+            : e.setAttribute(u, String(i)),
             (!1 === i ||
-              ("SCRIPT" === e.tagName && o(l) && (!i || "false" === i))) &&
-              (e.setAttribute(l, ""), e.removeAttribute(l))
+              ("SCRIPT" === e.tagName && o(u) && (!i || "false" === i))) &&
+              (e.setAttribute(u, ""), e.removeAttribute(u))
         }
       }
       ;("function" == typeof t.default ||
@@ -2769,8 +2775,8 @@
         o = r(8781),
         a = r(5640),
         i = n._(r(7897)),
-        l = o._(r(148)),
-        u = r(2499),
+        u = o._(r(148)),
+        l = r(2499),
         s = r(1535),
         c = r(2859),
         f = new Map(),
@@ -2799,14 +2805,14 @@
               onReady: o = null,
               dangerouslySetInnerHTML: a,
               children: i = "",
-              strategy: l = "afterInteractive",
-              onError: u,
+              strategy: u = "afterInteractive",
+              onError: l,
               stylesheets: c,
             } = e,
             h = r || t
           if (h && d.has(h)) return
           if (f.has(t)) {
-            d.add(h), f.get(t).then(n, u)
+            d.add(h), f.get(t).then(n, l)
             return
           }
           let _ = () => {
@@ -2821,7 +2827,7 @@
                   t(e)
                 })
             }).catch(function (e) {
-              u && u(e)
+              l && l(e)
             })
           a
             ? ((m.innerHTML = a.__html || ""), _())
@@ -2831,8 +2837,8 @@
               _())
             : t && ((m.src = t), f.set(t, g)),
             (0, s.setAttributesFromProps)(m, e),
-            "worker" === l && m.setAttribute("type", "text/partytown"),
-            m.setAttribute("data-nscript", l),
+            "worker" === u && m.setAttribute("type", "text/partytown"),
+            m.setAttribute("data-nscript", u),
             c && p(c),
             document.body.appendChild(m)
         }
@@ -2871,15 +2877,15 @@
             getIsSsr: b,
             appDir: E,
             nonce: y,
-          } = (0, l.useContext)(u.HeadManagerContext),
-          P = (0, l.useRef)(!1)
-        ;(0, l.useEffect)(() => {
+          } = (0, u.useContext)(l.HeadManagerContext),
+          P = (0, u.useRef)(!1)
+        ;(0, u.useEffect)(() => {
           let e = t || r
           P.current || (o && e && d.has(e) && o(), (P.current = !0))
         }, [o, t, r])
-        let v = (0, l.useRef)(!1)
+        let v = (0, u.useRef)(!1)
         if (
-          ((0, l.useEffect)(() => {
+          ((0, u.useEffect)(() => {
             if (!v.current) {
               if ("afterInteractive" === s) h(e)
               else
@@ -3014,8 +3020,8 @@
       let o = r(1532),
         a = r(8781),
         i = r(5640),
-        l = a._(r(148)),
-        u = o._(r(7620)),
+        u = a._(r(148)),
+        l = o._(r(7620)),
         s = r(955),
         c = r(2499),
         f = r(6275)
@@ -3037,9 +3043,9 @@
       function p(e, t) {
         return "string" == typeof t || "number" == typeof t
           ? e
-          : t.type === l.default.Fragment
+          : t.type === u.default.Fragment
           ? e.concat(
-              l.default.Children.toArray(t.props.children).reduce(
+              u.default.Children.toArray(t.props.children).reduce(
                 (e, t) =>
                   "string" == typeof t || "number" == typeof t
                     ? e
@@ -3116,17 +3122,17 @@
                 (t["data-href"] = t.href),
                 (t.href = void 0),
                 (t["data-optimized-fonts"] = !0),
-                l.default.cloneElement(e, t)
+                u.default.cloneElement(e, t)
               )
             }
-            return l.default.cloneElement(e, { key: o })
+            return u.default.cloneElement(e, { key: o })
           })
       }
       let m = function (e) {
         let { children: t } = e,
-          r = (0, l.useContext)(s.AmpStateContext),
-          n = (0, l.useContext)(c.HeadManagerContext)
-        return (0, i.jsx)(u.default, {
+          r = (0, u.useContext)(s.AmpStateContext),
+          n = (0, u.useContext)(c.HeadManagerContext)
+        return (0, i.jsx)(l.default, {
           reduceComponentsToState: _,
           headManager: n,
           inAmpMode: (0, f.isInAmpMode)(r),
@@ -3194,7 +3200,10 @@
         })
       let n = r(5200)
       function o(e) {
-        return (0, n.pathHasPrefix)(e, "")
+        return (0, n.pathHasPrefix)(
+          e,
+          "/13th_FRONT-END_ASSIGNMENT/namkyung/week3/chat-ui/out"
+        )
       }
       ;("function" == typeof t.default ||
         ("object" == typeof t.default && null !== t.default)) &&
@@ -3223,8 +3232,8 @@
             ? new URL(window.location.href)
             : a,
           {
-            pathname: l,
-            searchParams: u,
+            pathname: u,
+            searchParams: l,
             search: s,
             hash: c,
             href: f,
@@ -3237,8 +3246,8 @@
             { value: "E159", enumerable: !1, configurable: !0 }
           )
         return {
-          pathname: l,
-          query: r ? (0, o.searchParamsToUrlQuery)(u) : void 0,
+          pathname: u,
+          query: r ? (0, o.searchParamsToUrlQuery)(l) : void 0,
           search: s,
           hash: c,
           href: f.slice(d.length),
@@ -3256,7 +3265,7 @@
             return a
           },
           formatWithValidation: function () {
-            return l
+            return u
           },
           urlObjectKeys: function () {
             return i
@@ -3268,8 +3277,8 @@
         let { auth: t, hostname: r } = e,
           a = e.protocol || "",
           i = e.pathname || "",
-          l = e.hash || "",
-          u = e.query || "",
+          u = e.hash || "",
+          l = e.query || "",
           s = !1
         ;(t = t ? encodeURIComponent(t).replace(/%3A/i, ":") + "@" : ""),
           e.host
@@ -3277,21 +3286,21 @@
             : r &&
               ((s = t + (~r.indexOf(":") ? "[" + r + "]" : r)),
               e.port && (s += ":" + e.port)),
-          u && "object" == typeof u && (u = String(n.urlQueryToSearchParams(u)))
-        let c = e.search || (u && "?" + u) || ""
+          l && "object" == typeof l && (l = String(n.urlQueryToSearchParams(l)))
+        let c = e.search || (l && "?" + l) || ""
         return (
           a && !a.endsWith(":") && (a += ":"),
           e.slashes || ((!a || o.test(a)) && !1 !== s)
             ? ((s = "//" + (s || "")), i && "/" !== i[0] && (i = "/" + i))
             : s || (s = ""),
-          l && "#" !== l[0] && (l = "#" + l),
+          u && "#" !== u[0] && (u = "#" + u),
           c && "?" !== c[0] && (c = "?" + c),
           "" +
             a +
             s +
             (i = i.replace(/[?#]/g, encodeURIComponent)) +
             (c = c.replace("#", "%23")) +
-            l
+            u
         )
       }
       let i = [
@@ -3308,7 +3317,7 @@
         "search",
         "slashes",
       ]
-      function l(e) {
+      function u(e) {
         return a(e)
       }
     },
@@ -3603,17 +3612,17 @@
             )
           })(t[e])
           r.setAttribute("data-next-head", "")
-          let l = !0
+          let u = !0
           for (let e of n)
             if (a(e, r)) {
-              n.delete(e), (l = !1)
+              n.delete(e), (u = !1)
               break
             }
-          l && i.push(r)
+          u && i.push(r)
         }
         for (let e of n) {
-          var l
-          null == (l = e.parentNode) || l.removeChild(e)
+          var u
+          null == (u = e.parentNode) || u.removeChild(e)
         }
         for (let e of i)
           "meta" === e.tagName.toLowerCase() &&
@@ -3691,13 +3700,13 @@
         let t = e.digest.split(";"),
           [r, a] = t,
           i = t.slice(2, -2).join(";"),
-          l = Number(t.at(-2))
+          u = Number(t.at(-2))
         return (
           r === o &&
           ("replace" === a || "push" === a) &&
           "string" == typeof i &&
-          !isNaN(l) &&
-          l in n.RedirectStatusCode
+          !isNaN(u) &&
+          u in n.RedirectStatusCode
         )
       }
       ;("function" == typeof t.default ||
@@ -3823,10 +3832,10 @@
         let a = e.split("/", 2)
         if (!a[1]) return { pathname: e }
         let i = a[1].toLowerCase(),
-          l = o.indexOf(i)
-        return l < 0
+          u = o.indexOf(i)
+        return u < 0
           ? { pathname: e }
-          : ((n = t[l]),
+          : ((n = t[u]),
             { pathname: (e = e.slice(n.length + 1) || "/"), detectedLocale: n })
       }
     },
@@ -3853,7 +3862,7 @@
             return X
           },
           BLOCKED_PAGES: function () {
-            return U
+            return k
           },
           BUILD_ID_FILE: function () {
             return D
@@ -3862,7 +3871,7 @@
             return b
           },
           CLIENT_PUBLIC_FILES_PATH: function () {
-            return k
+            return U
           },
           CLIENT_REFERENCE_MANIFEST: function () {
             return W
@@ -3904,16 +3913,16 @@
             return en
           },
           DEFAULT_SANS_SERIF_FONT: function () {
-            return eu
-          },
-          DEFAULT_SERIF_FONT: function () {
             return el
           },
+          DEFAULT_SERIF_FONT: function () {
+            return eu
+          },
           DEV_CLIENT_MIDDLEWARE_MANIFEST: function () {
-            return N
+            return I
           },
           DEV_CLIENT_PAGES_MANIFEST: function () {
-            return C
+            return w
           },
           DYNAMIC_CSS_MANIFEST: function () {
             return Y
@@ -3934,7 +3943,7 @@
             return y
           },
           IMAGES_MANIFEST: function () {
-            return T
+            return j
           },
           INTERCEPTION_ROUTE_REWRITE_MANIFEST: function () {
             return z
@@ -3943,7 +3952,7 @@
             return q
           },
           MIDDLEWARE_MANIFEST: function () {
-            return w
+            return C
           },
           MIDDLEWARE_REACT_LOADABLE_MANIFEST: function () {
             return V
@@ -3964,7 +3973,7 @@
             return f
           },
           PHASE_EXPORT: function () {
-            return u
+            return l
           },
           PHASE_INFO: function () {
             return p
@@ -3985,7 +3994,7 @@
             return x
           },
           ROUTES_MANIFEST: function () {
-            return j
+            return T
           },
           RSC_MODULE_TYPES: function () {
             return ed
@@ -4021,7 +4030,7 @@
             return ec
           },
           TURBOPACK_CLIENT_MIDDLEWARE_MANIFEST: function () {
-            return I
+            return N
           },
           TURBO_TRACE_DEFAULT_MEMORY_LIMIT: function () {
             return ef
@@ -4030,7 +4039,7 @@
             return i
           },
           UNDERSCORE_NOT_FOUND_ROUTE_ENTRY: function () {
-            return l
+            return u
           },
           WEBPACK_STATS: function () {
             return _
@@ -4040,8 +4049,8 @@
         o = { client: "client", server: "server", edgeServer: "edge-server" },
         a = { [o.client]: 0, [o.server]: 1, [o.edgeServer]: 2 },
         i = "/_not-found",
-        l = "" + i + "/page",
-        u = "phase-export",
+        u = "" + i + "/page",
+        l = "phase-export",
         s = "phase-production-build",
         c = "phase-production-server",
         f = "phase-development-server",
@@ -4059,19 +4068,19 @@
         R = "export-marker.json",
         O = "export-detail.json",
         S = "prerender-manifest.json",
-        j = "routes-manifest.json",
-        T = "images-manifest.json",
+        T = "routes-manifest.json",
+        j = "images-manifest.json",
         A = "required-server-files.json",
-        C = "_devPagesManifest.json",
-        w = "middleware-manifest.json",
-        I = "_clientMiddlewareManifest.json",
-        N = "_devMiddlewareManifest.json",
+        w = "_devPagesManifest.json",
+        C = "middleware-manifest.json",
+        N = "_clientMiddlewareManifest.json",
+        I = "_devMiddlewareManifest.json",
         x = "react-loadable-manifest.json",
         M = "server",
         L = ["next.config.js", "next.config.mjs", "next.config.ts"],
         D = "BUILD_ID",
-        U = ["/_document", "/_app", "/_error"],
-        k = "public",
+        k = ["/_document", "/_app", "/_error"],
+        U = "public",
         F = "static",
         B = "_next_DROP_CLIENT_FILE__",
         H = "_next_BUILTIN_DOCUMENT__",
@@ -4094,13 +4103,13 @@
         eo = "edge-runtime-webpack",
         ea = "__N_SSG",
         ei = "__N_SSP",
-        el = {
+        eu = {
           name: "Times New Roman",
           xAvgCharWidth: 821,
           azAvgWidth: 854.3953488372093,
           unitsPerEm: 2048,
         },
-        eu = {
+        el = {
           name: "Arial",
           xAvgCharWidth: 904,
           azAvgWidth: 934.5116279069767,
@@ -4144,7 +4153,7 @@
             Object.defineProperty(e, r, { enumerable: !0, get: t[r] })
         })(t, {
           RouteAnnouncer: function () {
-            return u
+            return l
           },
           default: function () {
             return s
@@ -4154,7 +4163,7 @@
         o = r(5640),
         a = n._(r(148)),
         i = r(994),
-        l = {
+        u = {
           border: 0,
           clip: "rect(0 0 0 0)",
           height: "1px",
@@ -4167,7 +4176,7 @@
           whiteSpace: "nowrap",
           wordWrap: "normal",
         },
-        u = () => {
+        l = () => {
           let { asPath: e } = (0, i.useRouter)(),
             [t, r] = a.default.useState(""),
             n = a.default.useRef(e)
@@ -4191,12 +4200,12 @@
               "aria-live": "assertive",
               id: "_next-route-announcer__",
               role: "alert",
-              style: l,
+              style: u,
               children: t,
             })
           )
         },
-        s = u
+        s = l
       ;("function" == typeof t.default ||
         ("object" == typeof t.default && null !== t.default)) &&
         void 0 === t.default.__esModule &&
@@ -4306,10 +4315,10 @@
             return a
           },
           getBotType: function () {
-            return u
+            return l
           },
           isBot: function () {
-            return l
+            return u
           },
         })
       let n = r(6539),
@@ -4319,10 +4328,10 @@
       function i(e) {
         return n.HTML_LIMITED_BOT_UA_RE.test(e)
       }
-      function l(e) {
+      function u(e) {
         return o.test(e) || i(e)
       }
-      function u(e) {
+      function l(e) {
         return o.test(e) ? "dom" : i(e) ? "html" : void 0
       }
     },
@@ -4350,15 +4359,15 @@
         o = n._(r(148)),
         a = n._(r(2038)),
         i = r(7359),
-        l = "react-stack-bottom-frame",
-        u = RegExp("(at " + l + " )|(" + l + "\\@)")
+        u = "react-stack-bottom-frame",
+        l = RegExp("(at " + u + " )|(" + u + "\\@)")
       function s(e) {
         let t = (0, a.default)(e),
           r = (t && e.stack) || "",
           n = t ? e.message : "",
-          l = r.split("\n"),
-          s = l.findIndex((e) => u.test(e)),
-          c = s >= 0 ? l.slice(0, s).join("\n") : r,
+          u = r.split("\n"),
+          s = u.findIndex((e) => l.test(e)),
+          c = s >= 0 ? u.slice(0, s).join("\n") : r,
           f = Object.defineProperty(Error(n), "_next_ERROR_CODE", {
             value: "E394",
             enumerable: !1,
@@ -4577,13 +4586,13 @@
             return n
           },
           getDisplayName: function () {
-            return u
+            return l
           },
           getLocationOrigin: function () {
             return i
           },
           getURL: function () {
-            return l
+            return u
           },
           isAbsoluteUrl: function () {
             return a
@@ -4617,12 +4626,12 @@
         let { protocol: e, hostname: t, port: r } = window.location
         return e + "//" + t + (r ? ":" + r : "")
       }
-      function l() {
+      function u() {
         let { href: e } = window.location,
           t = i()
         return e.substring(t.length)
       }
-      function u(e) {
+      function l(e) {
         return "string" == typeof e ? e : e.displayName || e.name || "Unknown"
       }
       function s(e) {
@@ -4647,7 +4656,7 @@
           throw Object.defineProperty(
             Error(
               '"' +
-                u(e) +
+                l(e) +
                 '.getInitialProps()" should resolve to an object. But found "' +
                 n +
                 '" instead.'
@@ -4742,19 +4751,19 @@
       function a(e, t, r) {
         let a = "",
           i = (0, o.getRouteRegex)(e),
-          l = i.groups,
-          u = (t !== e ? (0, n.getRouteMatcher)(i)(t) : "") || r
+          u = i.groups,
+          l = (t !== e ? (0, n.getRouteMatcher)(i)(t) : "") || r
         a = e
-        let s = Object.keys(l)
+        let s = Object.keys(u)
         return (
           s.every((e) => {
-            let t = u[e] || "",
-              { repeat: r, optional: n } = l[e],
+            let t = l[e] || "",
+              { repeat: r, optional: n } = u[e],
               o = "[" + (r ? "..." : "") + e + "]"
             return (
               n && (o = (t ? "" : "/") + "[" + o + "]"),
               r && !Array.isArray(t) && (t = [t]),
-              (n || e in u) &&
+              (n || e in l) &&
                 (a =
                   a.replace(
                     o,
@@ -4781,8 +4790,8 @@
         o = r(704),
         a = r(5905),
         i = n._(r(6479)),
-        l = r(9043),
-        u = r(263),
+        u = r(9043),
+        l = r(263),
         s = r(2185),
         c = r(2618),
         f = r(892)
@@ -4809,11 +4818,11 @@
             )
           var m = e.skipInterpolation
             ? h
-            : (0, u.isDynamicRoute)(_)
+            : (0, l.isDynamicRoute)(_)
             ? (0, a.interpolateAs)(f, h, d).result
             : _
           let g = (0, i.default)(
-            (0, c.removeTrailingSlash)((0, l.addLocale)(m, n)),
+            (0, c.removeTrailingSlash)((0, u.addLocale)(m, n)),
             ".json"
           )
           return (0, o.addBasePath)("/next/data/" + this.buildId + g + p, !0)
@@ -4929,23 +4938,29 @@
     },
     6677: (e, t, r) => {
       "use strict"
-      function n(e) {
-        return e
-      }
       Object.defineProperty(t, "__esModule", { value: !0 }),
         Object.defineProperty(t, "removeBasePath", {
           enumerable: !0,
           get: function () {
-            return n
+            return o
           },
         }),
-        r(2043),
-        ("function" == typeof t.default ||
-          ("object" == typeof t.default && null !== t.default)) &&
-          void 0 === t.default.__esModule &&
-          (Object.defineProperty(t.default, "__esModule", { value: !0 }),
-          Object.assign(t.default, t),
-          (e.exports = t.default))
+        r(2043)
+      let n = "/13th_FRONT-END_ASSIGNMENT/namkyung/week3/chat-ui/out"
+      function o(e) {
+        return (
+          0 === n.length ||
+            (e = e.slice(n.length)).startsWith("/") ||
+            (e = "/" + e),
+          e
+        )
+      }
+      ;("function" == typeof t.default ||
+        ("object" == typeof t.default && null !== t.default)) &&
+        void 0 === t.default.__esModule &&
+        (Object.defineProperty(t.default, "__esModule", { value: !0 }),
+        Object.assign(t.default, t),
+        (e.exports = t.default))
     },
     6681: (e, t, r) => {
       "use strict"
@@ -4991,8 +5006,8 @@
         o = r(5640),
         a = n._(r(148)),
         i = r(383),
-        l = r(6681),
-        u = r(278),
+        u = r(6681),
+        l = r(278),
         s = r(1138)
       function c(e) {
         return {
@@ -5021,7 +5036,7 @@
       }
       function f(e) {
         return e.isReady && e.query
-          ? (0, u.asPathToSearchParams)(e.asPath)
+          ? (0, l.asPathToSearchParams)(e.asPath)
           : new URLSearchParams()
       }
       function d(e) {
@@ -5033,13 +5048,13 @@
       }
       function p(e) {
         let { children: t, router: r, ...n } = e,
-          u = (0, a.useRef)(n.isAutoExport),
+          l = (0, a.useRef)(n.isAutoExport),
           s = (0, a.useMemo)(() => {
             let e,
-              t = u.current
+              t = l.current
             if (
-              (t && (u.current = !1),
-              (0, l.isDynamicRoute)(r.pathname) &&
+              (t && (l.current = !1),
+              (0, u.isDynamicRoute)(r.pathname) &&
                 (r.isFallback || (t && !r.isReady)))
             )
               return null
@@ -5090,7 +5105,7 @@
               } catch (e) {
                 r = i
               }
-              function l(e) {
+              function u(e) {
                 if (t === setTimeout) return setTimeout(e, 0)
                 if ((t === a || !t) && setTimeout)
                   return (t = setTimeout), setTimeout(e, 0)
@@ -5104,23 +5119,23 @@
                   }
                 }
               }
-              var u = [],
+              var l = [],
                 s = !1,
                 c = -1
               function f() {
                 s &&
                   n &&
                   ((s = !1),
-                  n.length ? (u = n.concat(u)) : (c = -1),
-                  u.length && d())
+                  n.length ? (l = n.concat(l)) : (c = -1),
+                  l.length && d())
               }
               function d() {
                 if (!s) {
-                  var e = l(f)
+                  var e = u(f)
                   s = !0
-                  for (var t = u.length; t; ) {
-                    for (n = u, u = []; ++c < t; ) n && n[c].run()
-                    ;(c = -1), (t = u.length)
+                  for (var t = l.length; t; ) {
+                    for (n = l, l = []; ++c < t; ) n && n[c].run()
+                    ;(c = -1), (t = l.length)
                   }
                   ;(n = null),
                     (s = !1),
@@ -5149,7 +5164,7 @@
                 if (arguments.length > 1)
                   for (var r = 1; r < arguments.length; r++)
                     t[r - 1] = arguments[r]
-                u.push(new p(e, t)), 1 !== u.length || s || l(d)
+                l.push(new p(e, t)), 1 !== l.length || s || u(d)
               }),
                 (p.prototype.run = function () {
                   this.fun.apply(null, this.array)
@@ -5374,7 +5389,7 @@
     },
     8257: (e, t, r) => {
       "use strict"
-      let n, o, a, i, l, u, s, c, f, d, p, h
+      let n, o, a, i, u, l, s, c, f, d, p, h
       Object.defineProperty(t, "__esModule", { value: !0 })
       let _ = r(8781)
       Object.defineProperty(t, "__esModule", { value: !0 }),
@@ -5386,7 +5401,7 @@
             return X
           },
           hydrate: function () {
-            return eu
+            return el
           },
           initialize: function () {
             return V
@@ -5409,19 +5424,19 @@
         R = r(5168),
         O = r(263),
         S = r(9524),
-        j = r(9177),
-        T = r(5574),
+        T = r(9177),
+        j = r(5574),
         A = r(1078),
-        C = m._(r(2871)),
-        w = m._(r(6164)),
-        I = r(4178),
-        N = r(994),
+        w = m._(r(2871)),
+        C = m._(r(6164)),
+        N = r(4178),
+        I = r(994),
         x = r(2038),
         M = r(2593),
         L = r(6677),
         D = r(2043),
-        U = r(9110),
-        k = r(6877),
+        k = r(9110),
+        U = r(6877),
         F = r(383),
         B = r(499)
       r(2701), r(5643)
@@ -5480,18 +5495,18 @@
         let t = o.assetPrefix || ""
         if (
           (self._next_set_public_path__("" + t + "/next/"),
-          (0, j.setConfig)({
+          (0, T.setConfig)({
             serverRuntimeConfig: {},
             publicRuntimeConfig: o.runtimeConfig || {},
           }),
-          (a = (0, T.getURL)()),
+          (a = (0, j.getURL)()),
           (0, D.hasBasePath)(a) && (a = (0, L.removeBasePath)(a)),
           o.scriptLoader)
         ) {
           let { initScriptLoader: e } = r(1696)
           e(o.scriptLoader)
         }
-        i = new w.default(o.buildId, t)
+        i = new C.default(o.buildId, t)
         let s = (e) => {
           let [t, r] = e
           return i.routeLoader.onEntrypoint(t, r)
@@ -5501,8 +5516,8 @@
             window._next_P.map((e) => setTimeout(() => s(e), 0)),
           (window._next_P = []),
           (window._next_P.push = s),
-          ((u = (0, C.default)()).getIsSsr = () => n.isSsr),
-          (l = document.getElementById("_next")),
+          ((l = (0, w.default)()).getIsSsr = () => n.isSsr),
+          (u = document.getElementById("_next")),
           { assetPrefix: t }
         )
       }
@@ -5512,32 +5527,32 @@
       function Y(e) {
         var t
         let { children: r } = e,
-          o = b.default.useMemo(() => (0, k.adaptForAppRouterInstance)(n), [])
+          o = b.default.useMemo(() => (0, U.adaptForAppRouterInstance)(n), [])
         return (0, g.jsx)(q, {
           fn: (e) =>
             $({ App: f, err: e }).catch((e) =>
               console.error("Error rendering page: ", e)
             ),
-          children: (0, g.jsx)(U.AppRouterContext.Provider, {
+          children: (0, g.jsx)(k.AppRouterContext.Provider, {
             value: o,
             children: (0, g.jsx)(F.SearchParamsContext.Provider, {
-              value: (0, k.adaptForSearchParams)(n),
-              children: (0, g.jsx)(k.PathnameContextProviderAdapter, {
+              value: (0, U.adaptForSearchParams)(n),
+              children: (0, g.jsx)(U.PathnameContextProviderAdapter, {
                 router: n,
                 isAutoExport: null != (t = self._next_DATA__.autoExport) && t,
                 children: (0, g.jsx)(F.PathParamsContext.Provider, {
-                  value: (0, k.adaptForPathParams)(n),
+                  value: (0, U.adaptForPathParams)(n),
                   children: (0, g.jsx)(v.RouterContext.Provider, {
-                    value: (0, N.makePublicRouterInstance)(n),
+                    value: (0, I.makePublicRouterInstance)(n),
                     children: (0, g.jsx)(y.HeadManagerContext.Provider, {
-                      value: u,
+                      value: l,
                       children: (0, g.jsx)(M.ImageConfigContext.Provider, {
                         value: {
                           deviceSizes: [
                             640, 750, 828, 1080, 1200, 1920, 2048, 3840,
                           ],
                           imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
-                          path: "/next/image/",
+                          path: "/13th_FRONT-END_ASSIGNMENT/namkyung/week3/chat-ui/out/next/image/",
                           loader: "default",
                           dangerouslyAllowSVG: !1,
                           unoptimized: !1,
@@ -5557,9 +5572,9 @@
         return (0, g.jsx)(Y, { children: z(e, r) })
       }
       function $(e) {
-        let { App: t, err: l } = e
+        let { App: t, err: u } = e
         return (
-          console.error(l),
+          console.error(u),
           console.error(
             "A client-side exception has occurred, see here for more info: https://nextjs.org/docs/messages/client-side-exception-occurred"
           ),
@@ -5583,14 +5598,14 @@
             })
             .then((r) => {
               var i
-              let { ErrorComponent: u, styleSheets: s } = r,
+              let { ErrorComponent: l, styleSheets: s } = r,
                 c = K(t),
                 f = {
-                  Component: u,
+                  Component: l,
                   AppTree: c,
                   router: n,
                   ctx: {
-                    err: l,
+                    err: u,
                     pathname: o.page,
                     query: o.query,
                     asPath: a,
@@ -5600,9 +5615,9 @@
               return Promise.resolve(
                 (null == (i = e.props) ? void 0 : i.err)
                   ? e.props
-                  : (0, T.loadGetInitialProps)(t, f)
+                  : (0, j.loadGetInitialProps)(t, f)
               ).then((t) =>
-                ei({ ...e, err: l, Component: u, styleSheets: s, props: t })
+                ei({ ...e, err: u, Component: l, styleSheets: s, props: t })
               )
             })
         )
@@ -5632,7 +5647,7 @@
         )
       }
       function en() {
-        T.ST &&
+        j.ST &&
           (performance.mark(J.afterHydrate),
           performance.getEntriesByName(J.beforeRender, "mark").length &&
             (performance.measure(
@@ -5645,7 +5660,7 @@
           er())
       }
       function eo() {
-        if (!T.ST) return
+        if (!j.ST) return
         performance.mark(J.afterRender)
         let e = performance.getEntriesByName(J.routeChange, "mark")
         e.length &&
@@ -5671,10 +5686,10 @@
       function ei(e) {
         let t,
           r,
-          { App: o, Component: a, props: i, err: u } = e,
+          { App: o, Component: a, props: i, err: l } = e,
           f = "initial" in e ? void 0 : e.styleSheets
         a = a || s.Component
-        let d = { ...(i = i || s.props), Component: a, err: u, router: n }
+        let d = { ...(i = i || s.props), Component: a, err: l, router: n }
         s = d
         let p = !1,
           h = new Promise((e, t) => {
@@ -5757,14 +5772,14 @@
                 z(o, d),
                 (0, g.jsx)(A.Portal, {
                   type: "next-route-announcer",
-                  children: (0, g.jsx)(I.RouteAnnouncer, {}),
+                  children: (0, g.jsx)(N.RouteAnnouncer, {}),
                 }),
               ],
             }),
           ],
         })
-        var y = l
-        T.ST && performance.mark(J.beforeRender)
+        var y = u
+        j.ST && performance.mark(J.beforeRender)
         let P =
           ((t = et ? en : eo),
           (0, g.jsx)(ea, { callbacks: [t, _], children: m }))
@@ -5780,7 +5795,7 @@
           h
         )
       }
-      async function el(e) {
+      async function eu(e) {
         if (e.err && (void 0 === e.Component || !e.isHydratePass))
           return void (await $(e))
         try {
@@ -5791,7 +5806,7 @@
           await $({ ...e, err: t })
         }
       }
-      async function eu(e) {
+      async function el(e) {
         let t = o.err
         try {
           let e = await i.routeLoader.whenEntrypoint("/_app")
@@ -5807,8 +5822,8 @@
                     name: o,
                     startTime: a,
                     value: i,
-                    duration: l,
-                    entryType: u,
+                    duration: u,
+                    entryType: l,
                     entries: s,
                     attribution: c,
                   } = e,
@@ -5821,9 +5836,9 @@
                   id: n || f,
                   name: o,
                   startTime: a || t,
-                  value: null == i ? l : i,
+                  value: null == i ? u : i,
                   label:
-                    "mark" === u || "measure" === u ? "custom" : "web-vital",
+                    "mark" === l || "measure" === l ? "custom" : "web-vital",
                 }
                 c && (d.attribution = c), r.reportWebVitals(d)
               })
@@ -5835,7 +5850,7 @@
         }
         window._next_PRELOADREADY &&
           (await window._next_PRELOADREADY(o.dynamicIds)),
-          (n = (0, N.createRouter)(o.page, o.query, a, {
+          (n = (0, I.createRouter)(o.page, o.query, a, {
             initialProps: o.props,
             pageLoader: i,
             App: f,
@@ -5844,7 +5859,7 @@
             err: t,
             isFallback: !!o.isFallback,
             subscription: (e, t, r) =>
-              el(Object.assign({}, e, { App: t, scroll: r })),
+              eu(Object.assign({}, e, { App: t, scroll: r })),
             locale: o.locale,
             locales: o.locales,
             defaultLocale: h,
@@ -5861,7 +5876,7 @@
           isHydratePass: !0,
         }
         ;(null == e ? void 0 : e.beforeRender) && (await e.beforeRender()),
-          el(r)
+          eu(r)
       }
       ;("function" == typeof t.default ||
         ("object" == typeof t.default && null !== t.default)) &&
@@ -5884,7 +5899,7 @@
             return o
           },
           getAccessFallbackErrorTypeByStatus: function () {
-            return l
+            return u
           },
           getAccessFallbackHTTPStatus: function () {
             return i
@@ -5910,7 +5925,7 @@
       function i(e) {
         return Number(e.digest.split(";")[1])
       }
-      function l(e) {
+      function u(e) {
         switch (e) {
           case 401:
             return "unauthorized"
@@ -6009,13 +6024,13 @@
         o = r(5640),
         a = n._(r(148)),
         i = n._(r(1899)),
-        l = {
+        u = {
           400: "Bad Request",
           404: "This page could not be found",
           405: "Method Not Allowed",
           500: "Internal Server Error",
         }
-      function u(e) {
+      function l(e) {
         let { req: t, res: r, err: n } = e
         return {
           statusCode: r && r.statusCode ? r.statusCode : n ? n.statusCode : 404,
@@ -6048,7 +6063,7 @@
       class c extends a.default.Component {
         render() {
           let { statusCode: e, withDarkMode: t = !0 } = this.props,
-            r = this.props.title || l[e] || "An unexpected error has occurred"
+            r = this.props.title || u[e] || "An unexpected error has occurred"
           return (0, o.jsxs)("div", {
             style: s.error,
             children: [
@@ -6111,8 +6126,8 @@
         }
       }
       ;(c.displayName = "ErrorPage"),
-        (c.getInitialProps = u),
-        (c.origGetInitialProps = u),
+        (c.getInitialProps = l),
+        (c.origGetInitialProps = l),
         ("function" == typeof t.default ||
           ("object" == typeof t.default && null !== t.default)) &&
           void 0 === t.default.__esModule &&
@@ -6151,9 +6166,9 @@
           a = Object.defineProperty && Object.getOwnPropertyDescriptor
         for (var i in e)
           if ("default" !== i && Object.prototype.hasOwnProperty.call(e, i)) {
-            var l = a ? Object.getOwnPropertyDescriptor(e, i) : null
-            l && (l.get || l.set)
-              ? Object.defineProperty(o, i, l)
+            var u = a ? Object.getOwnPropertyDescriptor(e, i) : null
+            u && (u.get || u.set)
+              ? Object.defineProperty(o, i, u)
               : (o[i] = e[i])
           }
         return (o.default = e), r && r.set(e, o), o
@@ -6218,18 +6233,18 @@
             return a
           },
           MissingSlotContext: function () {
-            return u
+            return l
           },
           TemplateContext: function () {
-            return l
+            return u
           },
         })
       let n = r(1532)._(r(148)),
         o = n.default.createContext(null),
         a = n.default.createContext(null),
         i = n.default.createContext(null),
-        l = n.default.createContext(null),
-        u = n.default.createContext(new Set())
+        u = n.default.createContext(null),
+        l = n.default.createContext(new Set())
     },
     9175: (e, t) => {
       "use strict"
@@ -6305,14 +6320,14 @@
         Object.defineProperty(t, "formatNextPathnameInfo", {
           enumerable: !0,
           get: function () {
-            return l
+            return u
           },
         })
       let n = r(2618),
         o = r(821),
         a = r(5556),
         i = r(555)
-      function l(e) {
+      function u(e) {
         let t = (0, i.addLocale)(
           e.pathname,
           e.locale,
@@ -6738,15 +6753,15 @@
       function i(e, t) {
         var r, i
         let {
-            basePath: l,
-            i18n: u,
+            basePath: u,
+            i18n: l,
             trailingSlash: s,
           } = null != (r = t.nextConfig) ? r : {},
           c = { pathname: e, trailingSlash: "/" !== e ? e.endsWith("/") : s }
-        l &&
-          (0, a.pathHasPrefix)(c.pathname, l) &&
-          ((c.pathname = (0, o.removePathPrefix)(c.pathname, l)),
-          (c.basePath = l))
+        u &&
+          (0, a.pathHasPrefix)(c.pathname, u) &&
+          ((c.pathname = (0, o.removePathPrefix)(c.pathname, u)),
+          (c.basePath = u))
         let f = c.pathname
         if (
           c.pathname.startsWith("/next/data/") &&
@@ -6760,17 +6775,17 @@
             (f = "index" !== e[1] ? "/" + e.slice(1).join("/") : "/"),
             !0 === t.parseData && (c.pathname = f)
         }
-        if (u) {
+        if (l) {
           let e = t.i18nProvider
             ? t.i18nProvider.analyze(c.pathname)
-            : (0, n.normalizeLocalePath)(c.pathname, u.locales)
+            : (0, n.normalizeLocalePath)(c.pathname, l.locales)
           ;(c.locale = e.detectedLocale),
             (c.pathname = null != (i = e.pathname) ? i : c.pathname),
             !e.detectedLocale &&
               c.buildId &&
               (e = t.i18nProvider
                 ? t.i18nProvider.analyze(f)
-                : (0, n.normalizeLocalePath)(f, u.locales)).detectedLocale &&
+                : (0, n.normalizeLocalePath)(f, l.locales)).detectedLocale &&
               (c.locale = e.detectedLocale)
         }
         return c

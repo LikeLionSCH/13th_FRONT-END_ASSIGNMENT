@@ -2469,23 +2469,29 @@
     },
     3102: (e, t, r) => {
       "use strict"
-      function n(e) {
-        return e
-      }
       Object.defineProperty(t, "__esModule", { value: !0 }),
         Object.defineProperty(t, "removeBasePath", {
           enumerable: !0,
           get: function () {
-            return n
+            return o
           },
         }),
-        r(3786),
-        ("function" == typeof t.default ||
-          ("object" == typeof t.default && null !== t.default)) &&
-          void 0 === t.default.__esModule &&
-          (Object.defineProperty(t.default, "__esModule", { value: !0 }),
-          Object.assign(t.default, t),
-          (e.exports = t.default))
+        r(3786)
+      let n = "/13th_FRONT-END_ASSIGNMENT/namkyung/week3/chat-ui/out"
+      function o(e) {
+        return (
+          0 === n.length ||
+            (e = e.slice(n.length)).startsWith("/") ||
+            (e = "/" + e),
+          e
+        )
+      }
+      ;("function" == typeof t.default ||
+        ("object" == typeof t.default && null !== t.default)) &&
+        void 0 === t.default.__esModule &&
+        (Object.defineProperty(t.default, "__esModule", { value: !0 }),
+        Object.assign(t.default, t),
+        (e.exports = t.default))
     },
     3139: (e, t) => {
       "use strict"
@@ -3525,7 +3531,10 @@
         })
       let n = r(7431)
       function o(e) {
-        return (0, n.pathHasPrefix)(e, "")
+        return (0, n.pathHasPrefix)(
+          e,
+          "/13th_FRONT-END_ASSIGNMENT/namkyung/week3/chat-ui/out"
+        )
       }
       ;("function" == typeof t.default ||
         ("object" == typeof t.default && null !== t.default)) &&
@@ -4625,7 +4634,12 @@
       let n = r(2094),
         o = r(6970)
       function u(e, t) {
-        return (0, o.normalizePathTrailingSlash)((0, n.addPathPrefix)(e, ""))
+        return (0, o.normalizePathTrailingSlash)(
+          (0, n.addPathPrefix)(
+            e,
+            "/13th_FRONT-END_ASSIGNMENT/namkyung/week3/chat-ui/out"
+          )
+        )
       }
       ;("function" == typeof t.default ||
         ("object" == typeof t.default && null !== t.default)) &&
@@ -4803,7 +4817,7 @@
                       )
                     let D = t.tree,
                       U = t.cache,
-                      L = []
+                      k = []
                     for (let e of _) {
                       let {
                           pathToSegment: r,
@@ -4830,7 +4844,7 @@
                             s,
                             d,
                             !1,
-                            L
+                            k
                           )
                           if (null !== e) {
                             if (null === e.route) return v(t, T, M, w)
@@ -4883,7 +4897,7 @@
                           m(g))) {
                             let e = [...r, ...t]
                             e[e.length - 1] !== h.DEFAULT_SEGMENT_KEY &&
-                              L.push(e)
+                              k.push(e)
                           }
                         }
                         D = P
@@ -4892,7 +4906,7 @@
                     return (
                       (T.patchedTree = D),
                       (T.canonicalUrl = N),
-                      (T.scrollableSegments = L),
+                      (T.scrollableSegments = k),
                       (T.hashFragment = S),
                       (T.shouldScroll = P),
                       (0, s.handleMutable)(t, T)
@@ -6833,7 +6847,7 @@
         }, [])
         let { cache: w, tree: A, nextUrl: N, focusAndScrollRef: D } = d,
           U = (0, u.useMemo)(() => (0, _.findHeadInCache)(w, A[1]), [w, A]),
-          k = (0, u.useMemo)(() => (0, m.getSelectedParams)(A), [A]),
+          L = (0, u.useMemo)(() => (0, m.getSelectedParams)(A), [A]),
           I = (0, u.useMemo)(
             () => ({
               parentTree: A,
@@ -6863,9 +6877,9 @@
           (0, o.jsxs)(o.Fragment, {
             children: [
               (0, o.jsx)(M, { appRouterState: d }),
-              (0, o.jsx)(L, {}),
+              (0, o.jsx)(k, {}),
               (0, o.jsx)(c.PathParamsContext.Provider, {
-                value: k,
+                value: L,
                 children: (0, o.jsx)(c.PathnameContext.Provider, {
                   value: T,
                   children: (0, o.jsx)(c.SearchParamsContext.Provider, {
@@ -6907,7 +6921,7 @@
       }
       let D = new Set(),
         U = new Set()
-      function L() {
+      function k() {
         let [, e] = u.default.useState(0),
           t = D.size
         return (
@@ -7771,10 +7785,10 @@
             "pending" === e.status && S(e, t)
           })
       }
-      function L(e) {
+      function k(e) {
         return { $$typeof: h, _payload: e, _init: R }
       }
-      function k(e, t) {
+      function L(e, t) {
         var r = e._chunks,
           n = r.get(t)
         return (
@@ -7927,7 +7941,7 @@
       }
       function F(e, t, r, n, o) {
         var u = parseInt((t = t.split(":"))[0], 16)
-        switch ((u = k(e, u)).status) {
+        switch ((u = L(e, u)).status) {
           case "resolved_model":
             N(u)
             break
@@ -8031,10 +8045,10 @@
                     case "$":
                       return u.slice(1)
                     case "L":
-                      return L((r = k(r, (n = parseInt(u.slice(2), 16)))))
+                      return k((r = L(r, (n = parseInt(u.slice(2), 16)))))
                     case "@":
                       if (2 === u.length) return new Promise(function () {})
-                      return k(r, (n = parseInt(u.slice(2), 16)))
+                      return L(r, (n = parseInt(u.slice(2), 16)))
                     case "S":
                       return Symbol.for(u.slice(2))
                     case "F":
@@ -8088,10 +8102,10 @@
                     null !== A)
                   ) {
                     if (((A = (t = A).parent), t.errored))
-                      e = L((e = new O("rejected", null, t.value, a)))
+                      e = k((e = new O("rejected", null, t.value, a)))
                     else if (0 < t.deps) {
                       var l = new O("blocked", null, null, a)
-                      ;(t.value = e), (t.chunk = l), (e = L(l))
+                      ;(t.value = e), (t.chunk = l), (e = k(l))
                     }
                   }
                 } else e = t
@@ -8561,11 +8575,11 @@
               U(r, e)
             }
           ),
-          k(r, 0)
+          L(r, 0)
         )
       }),
         (t.createFromReadableStream = function (e, t) {
-          return eo((t = en(t)), e), k(t, 0)
+          return eo((t = en(t)), e), L(t, 0)
         }),
         (t.createServerReference = function (e, t) {
           function r() {

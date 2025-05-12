@@ -156,7 +156,7 @@
       )
     })(),
     (r.tu = (e) => r.tt().createScriptURL(e)),
-    (r.p = "/next/"),
+    (r.p = "/13th_FRONT-END_ASSIGNMENT/namkyung/week3/chat-ui/out/next/"),
     (() => {
       var e = { 68: 0, 150: 0, 39: 0 }
       ;(r.f.j = (t, o) => {
