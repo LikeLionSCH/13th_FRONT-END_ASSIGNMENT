@@ -41,5 +41,5 @@
 
 최유진
 <a href="https://likelionsch.github.io/13th_FRONT-END_ASSIGNMENT/yuno/week3/my-app/out">김윤오</a> <br/>
-이남경
+<a href="https://likelionsch.github.io/13th_FRONT-END_ASSIGNMENT/namkyung/week3/chat-ui/out">이남경</a> <br/>
 정채환
