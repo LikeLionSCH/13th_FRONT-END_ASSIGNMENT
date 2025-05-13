@@ -1,13 +1,5 @@
 /* 2주차 과제에서 사용했던 style.css 코드입니다. */
 
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background: linear-gradient(to bottom, #f58529, #dd2a7b, #8134af); /* 배경 그라데이션으로 설정 */
-}
-
 /* 채팅창 */
 .chat-container {
   width: 375px;

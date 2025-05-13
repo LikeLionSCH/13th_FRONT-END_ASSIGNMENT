@@ -3,6 +3,8 @@
 // React 상태 관리를 위한 useState 훅을 import
 import { useState } from "react";
 
+import "./globals.css";
+
 // 기존에 작성했던 style.css의 파일 코드 사용
 import styles from "./page.module.css";
 
@@ -14,7 +16,7 @@ function ChatHeader() {
   return (
     <div className={styles["chat-header"]}>
       <div className={styles.profile}>
-        <img src="" alt="Profile" />
+        
         <span>이승수</span>
       </div>
       <div className={styles.icons}>📞 🎥</div>
