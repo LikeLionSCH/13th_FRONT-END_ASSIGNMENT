@@ -4,30 +4,20 @@
 import { useState } from "react";
 
 // 기존에 작성했던 style.css의 파일 코드 사용
-import "./globals.css";
+import styles from "./page.module.css";
+
+// 채팅 메시지 컴포넌트 분리
+import ChatMessages from "./ChatMessages";
 
 // 채팅 상단 헤더 컴포넌트 (프로필 사진, 이름, 전화)
 function ChatHeader() {
   return (
-    <div className="chat-header">
-      <div className="profile">
+    <div className={styles["chat-header"]}>
+      <div className={styles.profile}>
         <img src="" alt="Profile" />
         <span>이승수</span>
       </div>
-      <div className="icons">📞 🎥</div>
-    </div>
-  );
-}
-
-// 채팅 메시지 목록 컴포넌트
-function ChatMessages({ messages }) {
-  return (
-    <div className="chat-messages">
-      {messages.map((msg, index) => (
-        <div key={index} className={`message ${msg.type}`}>
-          {msg.text}
-        </div>
-      ))}
+      <div className={styles.icons}>📞 🎥</div>
     </div>
   );
 }
@@ -52,7 +42,7 @@ function ChatInput({ onSend }) {
   };
 
   return (
-    <div className="chat-input">
+    <div className={styles["chat-input"]}>
       <input
         type="text"
         placeholder="메시지 입력..."
@@ -78,7 +68,7 @@ export default function Home() {
   };
 
   return (
-    <div className="chat-container">
+    <div className={styles["chat-container"]}>
       <ChatHeader />
       <ChatMessages messages={messages} />
       <ChatInput onSend={handleSendMessage} />
