@@ -42,7 +42,7 @@ function Chatbox({ Chat }) {
         <div className={item.who === 'me' ? mainstyles["my"] + ' ' + mainstyles["message"] : mainstyles["message"]}>
           {
             (item.who !== "me") &&
-             <div key={item.id} className={mainstyles["replyers1"]}>{item.who}</div>
+             <div key={item.id} className={mainstyles["user"]+' '+mainstyles["replyers1"]}>{item.who}</div>
 
           }
           <div key={item.id} className={item.who==='me'? mainstyles["my"]+' '+mainstyles["text"]:mainstyles["text"]}>{item.message}</div>
