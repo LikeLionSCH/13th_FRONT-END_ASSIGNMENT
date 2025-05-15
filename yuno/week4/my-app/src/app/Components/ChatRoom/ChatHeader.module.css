@@ -1,0 +1,40 @@
+.header {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid rgb(219, 219, 219);
+}
+.arrow {
+  padding: 10px;
+}
+
+.profile {
+  width: 25px;
+  height: 25px;
+  background-color: rgb(182, 182, 182);
+  border-radius: 30px;
+  margin: 0px 5px;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.info-name {
+  font-size: 13px;
+  font-weight: bold;
+}
+.info-intr {
+  font-size: 9px;
+  color: #afafaf;
+}
+.header .icon {
+  font-size: 18px;
+}
+.icon-phone {
+  padding: 5px;
+}
+.icon-face-talk {
+  padding: 5px;
+}

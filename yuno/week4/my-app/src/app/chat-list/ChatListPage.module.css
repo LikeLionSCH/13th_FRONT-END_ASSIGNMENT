@@ -1,0 +1,33 @@
+.ul {
+  overflow-y: scroll;
+  height: 368px;
+}
+.li {
+  /* margin: 10px 0px; */
+  padding: 10px 5px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.profile-img {
+  width: 30px;
+  height: 30px;
+  background-color: rgb(182, 182, 182);
+  border-radius: 30px;
+  margin: 0px 5px;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-name {
+
+}
+
+.recent-talk {
+  font-size: 13px;
+  color: rgb(145, 145, 145);
+}
