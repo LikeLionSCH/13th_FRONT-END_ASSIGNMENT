@@ -1,26 +1,4 @@
-body {
-    background-color: rgb(103, 186, 222);
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    height: 100vh;/*vh:viewport height. 이는 브라우저 창(또는 화면)의 높이를 기준으로 한 단위*/
-    overflow-x: hidden;
-    overflow-y: auto; 
-}
 
-.main {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
-    overflow: hidden;
-    width: 100%;
-    margin: 0 auto;
-    background-color: rgb(176, 225, 246);
-    
-    height: 100%;
-}
 
 .message {
     display: flex;
@@ -44,8 +22,8 @@ body {
     max-width: fit-content;
 }
 
-
 .my.message {
+    display:flex;
     align-self: flex-end; 
     max-width: 95%;
     margin: 5px 10px;

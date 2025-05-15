@@ -1,0 +1,68 @@
+.info-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 5px;
+    width: 100%;
+    overflow: hidden; /* 넘치는 요소 방지 */
+}
+.info-bar__time{
+   display:flex;
+   margin-left: 5px; 
+   font-size: 12px;
+    font-weight: bold;
+   
+}
+
+.info-bar__icons {
+    display: flex; 
+    gap: 8px; 
+    align-items: center; 
+    width: auto; 
+    max-width: 100px; 
+    margin-right: 10px;
+}
+
+.info-bar__icons img {
+    width: 16px;
+    height: auto;
+}
+
+
+.menu-bar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   
+}
+.out__icons{
+   display:flex;
+   margin-top: 2px;
+    width: 20px;
+   
+}
+.num{
+    display: flex;
+    font-weight: bold;
+    margin-left:-120px;
+}
+.name{
+    display: flex;
+    font-weight: bold;
+    font-size:medium;
+    margin-left: 35px;
+}
+.search__icons{
+    display:flex;
+    margin-right: -110px;
+    width: 18px;
+   
+}
+
+.menu__icons{
+    display:flex;
+    margin: top 1px;
+    margin-right: 2px;
+    width: 18px;
+   
+}

@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
     
     
     function sendMessage() {
-        const message = input.value.trim(); //입ㄺ창에 적은 텍스트를 가져옴. trim은 공백제거를 해주는 함수다.
+        const message = input.value.trim(); //입력력창에 적은 텍스트를 가져옴. trim은 공백제거를 해주는 함수다.
         if (message !== "") { //내가 문자를 입력했다면?
             const messageDiv = document.createElement("div");
             messageDiv.classList.add("my", "message"); //main에서 내가 만든 변수 이름름 
