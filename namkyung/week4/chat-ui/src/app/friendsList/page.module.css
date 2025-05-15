@@ -8,7 +8,7 @@
   flex-direction: column;
   box-shadow: 0 0 10px rgba(0,0,0,0.2);
   padding: 20px;
-}
+  }
 
 .Header {
   display: flex;
@@ -55,26 +55,18 @@
   padding-left: 5px;
 }
 
-.MessageList {
+.FriendsList {
   display: flex;
   align-items: center; 
 }
 
-.MessageList img {
+.FriendsList img {
   width: 45px;
   height: 45px;
   border-radius: 50%;
   margin: 3%;
 }
 
-.MessageList button {
-  width: 280px;
-  height: 70px;
-  border: none;
-  border-top: 1px solid #ccc;  
-  background-color: transparent;
-  text-align: left;
-}
 
 .Text {
   width: 272px;
@@ -84,34 +76,6 @@
   justify-content: center;
 }
 
-.Name{
-  font-size: 17px;
-  font-weight: bold;
-}
-
-.Message {
-  font-size: 14px;
-  font-weight: normal;
-  color: #999;
-  padding-top:3px;
-}
-
-.MessageListContents {
+.FriendContents {
   overflow-y: auto;
-}
-
-.SendTime {
-  display: flex;
-  align-items: center;
-  font-size: 14px;
-  font-weight: normal;
-  color: #999;
-  white-space: pre;
-  margin-left: auto;
-}
-
-.MessageTitle {
-  display: flex;
-  flex-direction: row;
-  padding-right: 10px;
 }

@@ -44,6 +44,9 @@ export default function Home() {
   const handleGoToChatList=()=>{
       push("/chatList")
   }
+  //친구목록창으로 이동
+  const handleGoToFriendsList=()=>
+    push("/friendsList")
 
   // 새 메시지 추가될 때마다 스크롤 아래로
   useEffect(() => {
@@ -57,9 +60,9 @@ export default function Home() {
         <img className={styles.arrow} src="/arrow.jpg" alt="뒤로가기"
         onClick={handleGoToChatList} />
         <div className={styles.who}>
-          <img className={styles.userPicture} src="/user.jpg" alt="유저 사진" />
+          <img className={styles.userPicture} src="/user.jpg" alt="유저 사진" onClick={handleGoToFriendsList}/>
           <div className={styles.userName}>
-            <span className={styles.name}>민병관</span>
+            <span className={styles.name} onClick={handleGoToFriendsList}>민병관</span>
             <img className={styles.arrowGray} src="/arrow_gray.jpg" alt="유저 정보 보기" />
           </div>
         </div>
