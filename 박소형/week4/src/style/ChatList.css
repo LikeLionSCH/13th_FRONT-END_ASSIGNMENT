@@ -1,0 +1,45 @@
+/* ✅ ChatList.css */
+.chat-list-container {
+  max-width: 360px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.chat-list {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.chat-list li {
+  padding: 12px;
+  margin: 8px 0;
+  background-color: #f2f2f2;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.chat-list li:hover {
+  background-color: #ddd;
+}
+
+.friend-button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.friend-button:hover {
+  background-color: #45a049;
+}
+
+
