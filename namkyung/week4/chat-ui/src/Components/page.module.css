@@ -1,0 +1,89 @@
+.chatMessages {
+  flex: 1;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: #ffffff;
+  height: 500px;
+  overflow-y: auto;
+}
+
+.messageLeft {
+  max-width: 70%;
+  word-wrap: break-word;
+  display: inline-block;
+  padding: 10px 15px;
+  border-radius: 40px;
+  font-size: 14px;
+  line-height: 1.4;
+
+  align-self: flex-start;
+  background-color: #e5e5ea;
+  color: black;
+  border-bottom-left-radius: 0;
+}
+
+.messageRight {
+  max-width: 70%;
+  word-wrap: break-word;
+  display: inline-block;
+  padding: 10px 15px;
+  border-radius: 40px;
+  font-size: 14px;
+  line-height: 1.4;
+
+  align-self: flex-end;
+  background-color: #007aff;
+  color: white;
+  border-bottom-right-radius: 0;
+}
+
+
+.bottom {
+  display: flex;
+  padding: 10px;
+  border-top: 1px solid #ccc;
+  background-color: #f5f5f7;
+}
+
+.bottom button {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+  padding: auto;
+  border: none;
+  border-radius: 50%;
+  background-color: #e5e5ea;
+  color: #969699;
+  font-size: 35px;
+}
+
+.inputSendBtn {
+  position: relative;
+  flex: 1;
+} 
+
+.inputSendBtn input {
+  flex: 1;
+  padding: 10px 65px 10px 15px;
+  border: 1px solid #ccc;
+  border-radius: 25px;
+  outline: none;
+  font-size: 20px;
+}
+
+.inputSendBtn input::placeholder {
+  color: #ccc;
+  padding-left: 5px;
+} 
+
+.inputSendBtn img {
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  right: 9px;
+  top: 50%;
+  transform: translateY(-57%);
+  cursor: pointer;
+}  
