@@ -98,6 +98,7 @@
 
 .MessageListContents {
   overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .SendTime {

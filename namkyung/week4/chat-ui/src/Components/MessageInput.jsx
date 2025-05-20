@@ -1,5 +1,5 @@
 //입력창, 버튼, 이벤트 처리
-import styles from '../app/page.module.css';
+import styles from './page.module.css';
 
 export default function MessageInput({ inputValue, setInputValue, onSend }) {
     const handleKeyDown = (e) => {
