@@ -1,0 +1,163 @@
+body {
+    font-family: Helvetica, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+.chat-container {
+    width: 350px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+.chat-header {
+    display: flex;
+    justify-content: center; /* 일단 전체 요소를 중앙 정렬 */
+    align-items: center; /* 세로 중앙 정렬 */
+    padding: 15px;
+    background: #4a90e2;
+    color: white;
+    position: relative; /* 아이콘을 왼쪽에 배치하기 위해 필요 */
+}
+
+.icons {
+    position: absolute;
+    right: 15px; /* 요소를 부모의 요소의 오른쪽에서 15px 떨어진 위치에 배치*/
+    display: flex;
+    gap: 10px; /* 아이콘 사이 간격 */
+}
+
+.icon {
+    width: 20px;
+    height: 20px;
+    filter: invert(1); /* 아이콘 색상을 흰색으로 변경 */
+    cursor: pointer;
+}
+
+.title {
+    font-size: 16px;
+}
+
+.chat-box {
+    flex: 1;
+    overflow-y: auto;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: 400px;
+    background: #f9f9f9;
+  }
+  
+  .message {
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+    position: relative;
+  }
+  .sent {
+    align-self: flex-end;
+    display: flex;
+    flex-direction: row-reverse; /* 말풍선을 오른쪽에, 읽음표시를 왼쪽에 */
+    align-items: flex-end;
+    gap: 4px; /* 말풍선과 1 사이 간격 */
+  }
+  .msg-text {
+    padding: 10px 15px;
+    border-radius: 18px;
+    max-width: 100%;
+    font-size: 14px;
+    line-height: 1.4;
+    word-break: break-word;
+  }
+  
+  .sent .msg-text {
+    background-color: #4a90e2;
+    color: white;
+    border-bottom-right-radius: 4px;
+  }
+  
+  .received .msg-text {
+    background-color: #d7d7d7;
+    color: #333;
+    border-bottom-left-radius: 4px;
+  }
+  
+  .msg-time {
+    font-size: 11px;
+    color: gray;
+    margin-top: 3px;
+    text-align: right;
+    padding-right: 8px;
+  }
+  
+  
+  .chat-input {
+    display: flex;
+    border-top: 1px solid #ddd;
+    padding: 10px;
+    background-color: white;
+  }
+  
+  .chat-input textarea {
+    flex: 1;
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    resize: none;
+    outline: none;
+    font-family: inherit;
+    font-size: 14px;
+    line-height: 1.4;
+  }
+  
+  .chat-input button {
+    margin-left: 10px;
+    padding: 0 20px;
+    border: none;
+    border-radius: 20px;
+    background: #4a90e2;
+    color: white;
+    cursor: pointer;
+  }
+
+/* 상대방 채팅 구조 변경 */
+.received {
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.profile {
+  flex-shrink: 0;
+}
+
+.profile img {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+}
+
+.message-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.sender-name {
+  font-size: 12px;
+  font-weight: bold;
+  color: #555;
+  margin-bottom: 3px;
+}
+
+/*1 표시 */
+.sent .read-status {
+  font-size: 11px;
+  color: gray;
+  margin-bottom: 3px;
+}
+  

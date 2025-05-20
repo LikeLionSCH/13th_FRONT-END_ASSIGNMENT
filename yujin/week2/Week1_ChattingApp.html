@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatting App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="chat-wrapper">
+
+        <!-- 헤더 영역 -->
+        <div class="chat-header">
+            <img src="BackIcon.png" alt="Back" class="icon back-icon">
+            <div class="profile">
+                <img src="PersonPicture.png" alt="Profile" class="profile-picture">
+                <div class="profile-info">
+                    <div class="name">홍길동</div>
+                    <div class="status">Online</div>
+                </div>
+            </div>
+            <div class="header-icons">
+                <img src="VideoCallIcon.png" alt="Video" class="icon">
+                <img src="CallIcon.png" alt="Call" class="icon">
+            </div>
+        </div>
+
+        <!-- 메시지 영역 -->
+        <div class="chat-body">
+            <div class="message my-message">
+                별 하나에 추억과
+                <div class="time">18:20</div>
+            </div>
+            <div class="message other-message">
+                별 하나에 사랑과 별
+                <div class="time">18:30</div>
+            </div>
+        </div>
+
+        <!-- 입력창 영역 -->
+        <div class="chat-input">
+            <img src="AddIcon.png" alt="Add" class="icon">
+            <input type="text" placeholder="메시지 입력">
+            <div class="input-icons">
+                <img src="CameraIcon.png" alt="Camera" class="icon">
+                <img src="MicIcon.png" alt="Mic" class="icon">
+            </div>
+            <button class="send-button">전송</button>
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
