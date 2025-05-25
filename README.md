@@ -1,3 +1,6 @@
+
+멋쟁이 사자처럼 동아리 활동 과제입니다.
+
 🦁 멋쟁이사자처럼 13th at 순천향대학교
 📝 세션 과제 제출용 Repository
 ❗ 과제 제출 규칙
@@ -43,3 +46,4 @@
 <a href="https://likelionsch.github.io/13th_FRONT-END_ASSIGNMENT/yuno/week3/my-app/out">김윤오</a> <br/>
 <a href="https://likelionsch.github.io/13th_FRONT-END_ASSIGNMENT/namkyung/week3/chat-ui/out">이남경</a> <br/>
 <a href="https://likelionsch.github.io/13th_FRONT-END_ASSIGNMENT/chaehwan/week3/my-app/out">정채환</a> <br/>
+
