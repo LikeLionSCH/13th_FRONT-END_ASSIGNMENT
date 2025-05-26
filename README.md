@@ -13,6 +13,9 @@
 
 이후 week 폴더 아래에 해당 주차 과제를 제출 합니다.
 
+API 문서
+[노션 링크](https://brave-pantydraco-b3d.notion.site/1c6a01e3cceb80b58031c3c024dd9997?pvs=4)
+
 ## 과제 제출 내역
 
 ### week1
