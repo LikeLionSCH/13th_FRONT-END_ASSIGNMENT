@@ -1,0 +1,30 @@
+.wrap {
+  width: 80%;
+  margin: auto;
+  /* border: 1px solid black; */
+  padding: 20px;
+}
+
+.inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+.inputs input {
+  border: .3px solid rgb(208, 208, 208);
+  border-radius: 5px;
+  padding: 10px 10px;
+  outline: none;
+}
+
+.btns {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.btns a {
+  font-size: 10px;
+  color: rgb(105, 105, 105);
+}

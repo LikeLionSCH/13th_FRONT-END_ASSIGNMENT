@@ -1,0 +1,65 @@
+.message {
+  display: flex;
+  margin: 10px 0px;
+  /* position: relative; */
+}
+
+.username {
+  position: absolute;
+  font-size: 6px;
+  /* top: 5px; */
+  left: 6px;
+  bottom: -10px;
+}
+
+.time {
+  position: absolute;
+  font-size: 7px;
+  color: black;
+}
+
+.my .time {
+  left: -20px;
+  bottom: 2px;
+}
+
+.op .time {
+  right: -17px;
+  bottom: 2px;
+}
+
+.profile {
+  width: 25px;
+  height: 25px;
+  background-color: rgb(182, 182, 182);
+  border-radius: 30px;
+  margin: 0px 5px;
+  position: relative;
+}
+
+.content {
+  max-width: 200px;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 12px;
+  position: relative;
+}
+
+.op {
+  align-items: center;
+}
+
+.op .content {
+  color: black;
+  background-color : #e2e2e2;
+}
+
+.my {
+  justify-content: end;
+  padding-right: 10px;
+}
+
+.my .content {
+  color: white;
+  background-color : #8f64ff;  
+}

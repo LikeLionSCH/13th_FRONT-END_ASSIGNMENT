@@ -1,0 +1,9 @@
+.inner {
+  position: relative;
+  width: 300px;
+  height: 500px;
+  /* overflow-y: scroll; */
+  border: 1px solid black;
+  margin: auto;
+  /* overflow-y: scroll; */
+}

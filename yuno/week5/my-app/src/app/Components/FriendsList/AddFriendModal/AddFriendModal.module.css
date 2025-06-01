@@ -1,0 +1,28 @@
+.window {
+  top: 0;
+  left: 0;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(98,98,98,.5);
+  z-index: 1;
+}
+.modal {
+  width: 330px;
+  height: 100px;
+  background-color: rgb(215, 192, 192);
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: 150px;
+  /* bottom: 0; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.modal input {
+  padding: 10px;
+}
