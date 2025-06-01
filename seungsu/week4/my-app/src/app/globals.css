@@ -1,0 +1,7 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(to bottom, #f58529, #dd2a7b, #8134af); /* 배경 그라데이션 */
+}
