@@ -1,0 +1,131 @@
+body, html, .App {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.chatting_container {
+  flex: 1;
+  overflow-y: auto;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: #fff;
+}
+
+.sent_message, .receive_message {
+  max-width: 70%;
+  padding: 10px 14px;
+  border-radius: 18px;
+  line-height: 1.4;
+  word-break: break-word;
+  font-size: 14px;
+}
+
+.sent_message_container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.sent_message {
+  background-color: #3797f0;
+  color: white;
+  border-bottom-right-radius: 4px;
+}
+
+.receive_message_container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.receive_message {
+  background-color: #e5e5ea;
+  border-bottom-left-radius: 4px;
+}
+
+.input_field {
+  display: flex;
+  border-top: 1px solid #ccc;
+  padding: 8px 10px;
+  background-color: white;
+}
+
+.input_field input {
+  flex: 1;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  outline: none;
+  font-size: 14px;
+}
+
+.input_field button {
+  margin-left: 10px;
+  padding: 8px 16px;
+  background-color: #3797f0;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.friend_list {
+  padding: 20px;
+  background-color: white;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.friend_list h2 {
+  margin-top: 0;
+}
+
+.friend_list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.friend_list li {
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.friend_list li:hover {
+  background-color: #f0f0f0;
+}
+
+.chat_header {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: #3797f0;
+  color: white;
+}
+
+.chat_header button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.chat_window {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
