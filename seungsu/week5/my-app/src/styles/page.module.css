@@ -1,0 +1,104 @@
+.gradient-background {
+  background: linear-gradient(to bottom, #fc4a1a, #f7b733, #fd1d1d, #833ab4);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 채팅 컨테이너 */
+.chat-container {
+  width: 375px;
+  height: 650px;
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* 헤더 */
+.chat-header {
+  padding: 15px;
+  background: white;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.chat-header .profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.chat-header .profile img {
+  width: 36px;
+  height: 36px;
+  border-radius: 18px;
+}
+.chat-header .profile span {
+  font-weight: bold;
+  font-size: 16px;
+}
+.chat-header .icons {
+  display: flex;
+  gap: 15px;
+  font-size: 20px;
+  color: #d62976;
+}
+
+/* 메시지 */
+.chat-messages {
+  flex: 1;
+  background: #f0f0f0;
+  padding: 15px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+.message {
+  max-width: 70%;
+  padding: 12px 15px;
+  margin-bottom: 10px;
+  border-radius: 18px;
+  font-size: 14px;
+  display: inline-block;
+}
+.message.sent {
+  background: #833ab4;
+  color: white;
+  align-self: flex-end;
+  border-bottom-right-radius: 5px;
+}
+.message.received {
+  background: #e0e0e0;
+  color: black;
+  align-self: flex-start;
+  border-bottom-left-radius: 5px;
+}
+
+/* 입력창 */
+.chat-input {
+  padding: 10px;
+  border-top: 1px solid #ddd;
+  background: white;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.chat-input input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 25px;
+  outline: none;
+  font-size: 14px;
+}
+.chat-input button {
+  background: none;
+  border: none;
+  font-size: 20px;
+  color: #3897f0;
+  cursor: pointer;
+}
