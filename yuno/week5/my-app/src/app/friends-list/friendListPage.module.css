@@ -1,0 +1,35 @@
+.content {
+  height: 449px;
+  overflow-y: scroll;
+  position: relative;
+}
+.addIcon {
+  position: absolute;
+  right: 20px;
+  top: 25px;
+}
+.ul {
+  overflow-y: scroll;
+  height: 368px;
+}
+.li {
+  /* margin: 10px 0px; */
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* gap: 10px; */
+}
+.li .info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.profile-img {
+  width: 30px;
+  height: 30px;
+  background-color: rgb(182, 182, 182);
+  border-radius: 30px;
+  margin: 0px 5px;
+}
